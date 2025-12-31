@@ -13,6 +13,7 @@ echo ""
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
+BOLD='\033[1m'
 NC='\033[0m' # No Color
 
 # Funktion für farbige Ausgabe
@@ -199,21 +200,42 @@ echo ""
 print_warning "Hinweis: Falls eine Firewall aktiv ist, Port $DASHBOARD_PORT freigeben:"
 echo "  ufw allow $DASHBOARD_PORT/tcp"
 
+# Schritt 12: Dashboard URL ermitteln und anzeigen
+echo ""
+echo "Schritt 12: Dashboard-Zugriff konfigurieren..."
+
 # IP-Adresse ermitteln
 IP_ADDRESS=$(hostname -I | awk '{print $1}')
+
+# URL zusammenstellen
+if [ "$DASHBOARD_PORT" = "80" ]; then
+    DASHBOARD_URL="http://$IP_ADDRESS"
+else
+    DASHBOARD_URL="http://$IP_ADDRESS:$DASHBOARD_PORT"
+fi
+
+print_status "Dashboard ist bereit!"
 
 # Fertig!
 echo ""
 echo "=========================================="
-echo -e "${GREEN}Deployment erfolgreich abgeschlossen!${NC}"
+echo -e "${GREEN}✓ Deployment erfolgreich abgeschlossen!${NC}"
 echo "=========================================="
 echo ""
-echo "Dashboard erreichbar unter:"
-echo "  → http://$IP_ADDRESS:$DASHBOARD_PORT"
+echo -e "${GREEN}${BOLD}Ihr Dashboard ist jetzt erreichbar unter:${NC}"
+echo ""
+echo -e "  ${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "  ${GREEN}➜  ${DASHBOARD_URL}${NC}"
+echo -e "  ${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+echo "Öffnen Sie diese URL in Ihrem Browser!"
 echo ""
 echo "Nützliche Befehle:"
 echo "  nginx neu starten:  systemctl restart nginx"
 echo "  nginx Status:       systemctl status nginx"
 echo "  nginx Logs:         tail -f /var/log/nginx/error.log"
 echo "  Update ausführen:   cd $INSTALL_DIR && ./update.sh"
+echo ""
+echo "Dashboard-URL:"
+echo "  $DASHBOARD_URL"
 echo ""

@@ -124,4 +124,27 @@ echo "Änderungen:"
 git log --oneline --no-merges $CURRENT_COMMIT..$LATEST_COMMIT
 echo ""
 print_status "Dashboard wurde aktualisiert von $CURRENT_COMMIT auf $LATEST_COMMIT"
+
+# Dashboard-URL anzeigen
+echo ""
+echo "Dashboard-URL:"
+
+# Versuche Port aus nginx config zu lesen
+if [ -f "/etc/nginx/sites-available/iobroker-dashboard" ]; then
+    DASHBOARD_PORT=$(grep -oP 'listen\s+\K\d+' /etc/nginx/sites-available/iobroker-dashboard | head -1)
+else
+    DASHBOARD_PORT="80"
+fi
+
+IP_ADDRESS=$(hostname -I | awk '{print $1}')
+
+if [ "$DASHBOARD_PORT" = "80" ]; then
+    DASHBOARD_URL="http://$IP_ADDRESS"
+else
+    DASHBOARD_URL="http://$IP_ADDRESS:$DASHBOARD_PORT"
+fi
+
+echo -e "  ${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "  ${GREEN}➜  ${DASHBOARD_URL}${NC}"
+echo -e "  ${YELLOW}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
