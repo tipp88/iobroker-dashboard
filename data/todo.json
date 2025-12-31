@@ -1,0 +1,3985 @@
+{
+  "plan": {
+    "type": "new_pages",
+    "notes": [
+      "Each page has a dashboardView and a changeView.",
+      "dashboardView can be a Grafana dashboard (by uid) or a control-panels layout.",
+      "changeView is always a control-panels layout.",
+      "All states are included exactly as provided."
+    ]
+  },
+  "pages": [
+    {
+      "key": "heizung",
+      "title": "Heizung",
+      "route": "/heizung",
+      "dashboardView": {
+        "type": "grafana",
+        "grafanaUid": "SfyRMk14z"
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "heizung_control",
+              "title": "Heizung",
+              "controlPanelIds": [
+                "d805b1e8-c6f5-4a32-aa07-5e801ad17fd7",
+                "ea589e22-cd0d-4337-81f3-c4fe1342ea03",
+                "16b986b5-58e8-4da6-abfb-b70c5f7f0933",
+                "b31cd3c8-1733-4b85-9b80-1ff26b1833ab"
+              ]
+            },
+            {
+              "key": "heizung_heizzeiten",
+              "title": "Heizung Heizzeiten",
+              "controlPanelIds": [
+                "f9b38f96-75e0-45a3-b8b7-529d3d6109dc"
+              ]
+            },
+            {
+              "key": "verdichter",
+              "title": "Verdichter",
+              "controlPanelIds": [
+                "e02c7199-52d3-48db-b1f7-4f33f6a67d4a"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "klimaanlage",
+      "title": "Klimaanlage",
+      "route": "/klimaanlage",
+      "dashboardView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "klima_panels",
+              "title": "Klimaanlage",
+              "controlPanelIds": [
+                "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1",
+                "e07e04d2-7923-45c0-9324-0b262f822e78",
+                "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_f309b",
+                "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_69be6"
+              ]
+            }
+          ]
+        }
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "klima_panels",
+              "title": "Klimaanlage",
+              "controlPanelIds": [
+                "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1",
+                "e07e04d2-7923-45c0-9324-0b262f822e78",
+                "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_f309b",
+                "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_69be6"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "lueftung",
+      "title": "Lüftung",
+      "route": "/lueftung",
+      "dashboardView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "lueftung_controls",
+              "title": "Lüftung",
+              "controlPanelIds": [
+                "f7fbeb6f-12d7-4446-a86a-f341cc73c7df"
+              ]
+            }
+          ]
+        }
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "lueftung_controls",
+              "title": "Lüftung",
+              "controlPanelIds": [
+                "f7fbeb6f-12d7-4446-a86a-f341cc73c7df"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "wasser",
+      "title": "Wasser",
+      "route": "/wasser",
+      "dashboardView": {
+        "type": "grafana",
+        "grafanaUid": "z6Qnimb4z"
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "gruenbeck",
+              "title": "Grünbeck",
+              "controlPanelIds": [
+                "14412c55-9592-48e9-b453-5202886e9d22"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "autos",
+      "title": "Autos",
+      "route": "/autos",
+      "dashboardView": {
+        "type": "grafana",
+        "grafanaUid": "fea25ugabezuoc"
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "grid",
+          "columns": 2,
+          "sections": [
+            {
+              "key": "bmw_box",
+              "title": "BMW",
+              "controlPanelIds": [
+                "cabe35fd-72ef-4500-8ffb-4a5398f26d33"
+              ]
+            },
+            {
+              "key": "cupra_box",
+              "title": "CUPRA",
+              "controlPanelIds": [
+                "abcb1f20-33b0-435a-ac61-c2f99912314a"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "dreame",
+      "title": "Dreame",
+      "route": "/dreame",
+      "dashboardView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "dreame_controls",
+              "title": "Dreame",
+              "controlPanelIds": [
+                "5ca40baa-8210-4a3c-a618-bb1df47427d0"
+              ]
+            }
+          ]
+        }
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "dreame_controls",
+              "title": "Dreame",
+              "controlPanelIds": [
+                "5ca40baa-8210-4a3c-a618-bb1df47427d0"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "wallbox",
+      "title": "Wallbox",
+      "route": "/wallbox",
+      "dashboardView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "wattpilot_controls",
+              "title": "Wattpilot",
+              "controlPanelIds": [
+                "c17ee98f-6bbe-43bc-9823-11ea9ae9f7ec"
+              ]
+            }
+          ]
+        }
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "wattpilot_controls",
+              "title": "Wattpilot",
+              "controlPanelIds": [
+                "c17ee98f-6bbe-43bc-9823-11ea9ae9f7ec"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "key": "rollaeden",
+      "title": "Rollläden",
+      "route": "/rollaeden",
+      "dashboardView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "rollaeden_automatik",
+              "title": "Rollläden Automatik",
+              "controlPanelIds": [
+                "77211b9d-86f8-4b52-a804-9ad10056b94c"
+              ]
+            },
+            {
+              "key": "rollaeden_devices",
+              "title": "Rollläden (Devices)",
+              "controlPanelIds": [
+                "rollladenessecke_9b1fd",
+                "rollladencouchecke_eb203",
+                "deviceshplg-s#4022d889bb9b#1_8c38d",
+                "rolladentechnik_36755",
+                "rollladengast_7f884",
+                "rollladenbadnord_2b78b",
+                "rolladenbürosüd_58818",
+                "rolladenkindsüd_c87a1",
+                "rollladenbalkonessecke_1646a",
+                "rollladenbadwest_50a20",
+                "rollladenwc_9f37e",
+                "rollladenfluroben_bfe58",
+                "rollladenschlafzimmer_f4f6c",
+                "rollladenflurunten_73bff",
+                "rollladenküche_aa6c9",
+                "rollladenbüroost_4f3be",
+                "rollladen1kind_3f7d8",
+                "rolladenankleide_31a17",
+                "balkonkueche_596de"
+              ]
+            }
+          ]
+        }
+      },
+      "changeView": {
+        "type": "controlPanels",
+        "layout": {
+          "type": "stack",
+          "sections": [
+            {
+              "key": "rollaeden_automatik",
+              "title": "Rollläden Automatik",
+              "controlPanelIds": [
+                "77211b9d-86f8-4b52-a804-9ad10056b94c"
+              ]
+            },
+            {
+              "key": "rollaeden_devices",
+              "title": "Rollläden (Devices)",
+              "controlPanelIds": [
+                "rollladenessecke_9b1fd",
+                "rollladencouchecke_eb203",
+                "deviceshplg-s#4022d889bb9b#1_8c38d",
+                "rolladentechnik_36755",
+                "rollladengast_7f884",
+                "rollladenbadnord_2b78b",
+                "rolladenbürosüd_58818",
+                "rolladenkindsüd_c87a1",
+                "rollladenbalkonessecke_1646a",
+                "rollladenbadwest_50a20",
+                "rollladenwc_9f37e",
+                "rollladenfluroben_bfe58",
+                "rollladenschlafzimmer_f4f6c",
+                "rollladenflurunten_73bff",
+                "rollladenküche_aa6c9",
+                "rollladenbüroost_4f3be",
+                "rollladen1kind_3f7d8",
+                "rolladenankleide_31a17",
+                "balkonkueche_596de"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "controlPanels": {
+    "38b23963-0094-4ee9-91fe-ce2944e6e61e": {
+      "name": "Heizung",
+      "icon": "heating",
+      "label": "Heizung.Info",
+      "function": "heating",
+      "states": {
+        "Sonntag Badetag": {
+          "_created": 1732004295249,
+          "stateKey": "Sonntag Badetag",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Sonntag_Badetag_",
+          "_updated": 1732004318614,
+          "label": "Sonntag Badetag?",
+          "actionElement": "SwitchAction"
+        },
+        "Warmwasser bis": {
+          "_created": 1721397680506,
+          "stateKey": "Warmwasser bis",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Warmwasser_bis_HH",
+          "_updated": 1732000252823,
+          "actionElement": "TimePickerAction",
+          "_copied": 1732000216061,
+          "label": "Warmwasser bis"
+        },
+        "Warmwasser von": {
+          "_created": 1721397629350,
+          "stateKey": "Warmwasser von",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Warmwasser_von_HH",
+          "_updated": 1732000281508,
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {},
+          "_copied": 1732000201682,
+          "label": "Warmwasser von"
+        },
+        "PV Prio": {
+          "_created": 1721647722656,
+          "stateKey": "PV Prio",
+          "showState": false,
+          "label": "PV Prio",
+          "_updated": 1721647965285,
+          "state": "0_userdata.0.PV.Uberschuss_config.PV_Prio",
+          "display": {
+            "Auto": "Auto laden",
+            "Warmwasser": "Warmwasser"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Kühlen bis": {
+          "_created": 1721397719851,
+          "stateKey": "Kühlen bis",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlen_bis_HH",
+          "_updated": 1721397729478,
+          "actionElement": "TimePickerAction"
+        },
+        "Kühlen von": {
+          "_created": 1721397702392,
+          "stateKey": "Kühlen von",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlen_von_HH",
+          "_updated": 1721397713995,
+          "actionElement": "TimePickerAction"
+        },
+        "Heizen bis": {
+          "_created": 1721397680506,
+          "stateKey": "Heizen bis",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizen_bis_HH",
+          "_updated": 1721397694665,
+          "actionElement": "TimePickerAction"
+        },
+        "Heizen von": {
+          "_created": 1721397629350,
+          "stateKey": "Heizen von",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizen_von_HH",
+          "_updated": 1721397669191,
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {}
+        },
+        "Kühlen Akku-Limit": {
+          "_created": 1718614153027,
+          "stateKey": "Kühlen Akku-Limit",
+          "showState": true,
+          "label": "Kühlen Akku-Limit",
+          "_updated": 1718614186015,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Akku_SOC_limit",
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Akku_SOC_limit",
+          "unit": "%",
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {}
+        },
+        "Heizprogramm": {
+          "_created": 1709042082524,
+          "stateKey": "Heizprogramm",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizprogramm",
+          "_updated": 1709042276447,
+          "actionElement": "DropdownAction",
+          "DropdownActionConfig": {},
+          "display": {
+            "24hHeizen": "24hHeizen",
+            "Nachtabsenkung": "Nachtabsenkung"
+          },
+          "label": "Heizprogramm"
+        },
+        "SG-Ready DischargeLimit": {
+          "_created": 1708600829059,
+          "stateKey": "SG-Ready DischargeLimit",
+          "showState": true,
+          "label": "SG-Ready DischargeLimit",
+          "_updated": 1708600905574,
+          "unit": "Wh",
+          "action": "0_userdata.0.PV.SG_Ready_Discharge_Threshold",
+          "state": "0_userdata.0.PV.SG_Ready_Discharge_Threshold",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "-2000",
+            "max": "0"
+          },
+          "LevelBodyConfig": {}
+        },
+        "10min Überschuss avg": {
+          "_created": 1703069940810,
+          "stateKey": "10min Überschuss avg",
+          "showState": true,
+          "action": "",
+          "_updated": 1703069988134,
+          "unit": "Wh",
+          "state": "0_userdata.0.PV.Avg10min",
+          "label": "10min Überschuss Avg"
+        },
+        "SG-Ready PV-Limit": {
+          "_created": 1703069869545,
+          "stateKey": "SG-Ready PV-Limit",
+          "showState": true,
+          "label": "SG-Ready PV-Limit",
+          "_updated": 1703070379142,
+          "action": "0_userdata.0.PV.SG_Ready_limit",
+          "unit": "Wh",
+          "actionElement": null,
+          "InputActionConfig": {},
+          "properties": {
+            "min": "1500",
+            "max": "3500"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "100",
+            "markStep": "20"
+          }
+        },
+        "Heizkurve": {
+          "_created": 1702560794242,
+          "stateKey": "Heizkurve",
+          "showState": true,
+          "label": "Heizkurve",
+          "_updated": 1703070757661,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Heizkurve",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "0.20",
+            "max": "0.50"
+          },
+          "LevelBodyConfig": {
+            "step": "0.01",
+            "markStep": "30"
+          }
+        },
+        "Raumeinfluss": {
+          "_created": 1700052588607,
+          "stateKey": "Raumeinfluss",
+          "showState": false,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Raumeinfluss",
+          "_updated": 1703236448275,
+          "unit": "%",
+          "label": "Raumeinfluss",
+          "actionElement": null,
+          "DropdownActionConfig": {},
+          "display": "",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        "Warmwasser ECO": {
+          "_created": 1699517712594,
+          "stateKey": "Warmwasser ECO",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.WW_ECO",
+          "_updated": 1703079715188,
+          "label": "Warmwasser ECO",
+          "unit": "°C",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 20,
+            "max": 55
+          },
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "Warmwasser Komfort": {
+          "_created": 1699517706896,
+          "stateKey": "Warmwasser Komfort",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.WW_Komfort",
+          "_updated": 1753694944976,
+          "unit": "°C",
+          "actionElement": null,
+          "label": "Warmwasser Komfort",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 40,
+            "max": 60
+          },
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "20"
+          }
+        },
+        "Server Response": {
+          "_created": 1697097222233,
+          "stateKey": "Server Response",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Last_Response",
+          "_updated": 1697097229748,
+          "label": "Server Response"
+        },
+        "SG-Raumtemperatur": {
+          "_created": 1697027086730,
+          "stateKey": "SG-Raumtemperatur",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.SG_Komfort",
+          "_updated": 1718195532958,
+          "unit": "°C",
+          "label": "SG-Ready Raumtemperatur",
+          "actionElement": null,
+          "properties": {
+            "min": 20,
+            "max": 25
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "SG-Warmwasser": {
+          "_created": 1697027072537,
+          "stateKey": "SG-Warmwasser",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.SG_WW",
+          "_updated": 1703079934752,
+          "unit": "°C",
+          "label": "SG-Ready Warmwassertemperatur",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 50,
+            "max": 65
+          },
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "15"
+          }
+        },
+        "ECO Temperatur": {
+          "_created": 1697025364064,
+          "stateKey": "ECO Temperatur",
+          "showState": true,
+          "label": "ECO Temperatur",
+          "_updated": 1703079997762,
+          "unit": "°C",
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.ECO_Temp",
+          "actionElement": null,
+          "properties": {
+            "min": 15,
+            "max": 25
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "Komforttemperatur": {
+          "_created": 1697020893132,
+          "stateKey": "Komforttemperatur",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Raumtemp",
+          "_updated": 1703080025373,
+          "actionElement": null,
+          "properties": {
+            "min": 15,
+            "max": 25
+          },
+          "display": "",
+          "unit": "°C",
+          "label": "Komforttemperatur",
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "Kühlleistung": {
+          "_created": 1692595769577,
+          "stateKey": "Kühlleistung",
+          "showState": false,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlleistung",
+          "_updated": 1694437906075,
+          "label": "Kühlleistung",
+          "unit": "KW",
+          "actionElement": "DropdownAction",
+          "DropdownActionConfig": {},
+          "display": {
+            "4,0": "4,0",
+            "5,0": "5,0",
+            "6,0": "6,0",
+            "7,0": "7,0",
+            "8,0": "8,0"
+          }
+        },
+        "Außentemp_Vorhersage": {
+          "_created": 1691746164222,
+          "stateKey": "Außentemp_Vorhersage",
+          "showState": false,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Außentemp_Vorhersage",
+          "_updated": 1718616581073,
+          "label": "Außentemperatur Vorhersage Limit",
+          "unit": "°C",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "18",
+            "max": "28"
+          },
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "Timeout": {
+          "_created": 1689112166790,
+          "stateKey": "Timeout",
+          "showState": true,
+          "action": "",
+          "_updated": 1689112203700,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Timeout"
+        },
+        "Taupunkt Hysterese": {
+          "_created": 1689111840668,
+          "stateKey": "Taupunkt Hysterese",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Taupunkt_hysterese",
+          "_updated": 1689112433618,
+          "unit": "K",
+          "label": "Taupunkt Hysterese",
+          "actionElement": "DropdownAction",
+          "DropdownActionConfig": {},
+          "display": {
+            "1": "1",
+            "0.5": "0.5",
+            "0.6": "0.6",
+            "0.7": "0.7",
+            "0.8": "0.8",
+            "0.9": "0.9",
+            "1.5": "1.5"
+          }
+        },
+        "Timeout Trigger": {
+          "_created": 1689109609286,
+          "stateKey": "Timeout Trigger",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Trigger",
+          "_updated": 1689111604267,
+          "label": "Timeout Trigger",
+          "actionElement": "SwitchAction",
+          "SwitchActionConfig": {
+            "ack": true
+          }
+        },
+        "Legionellenprogramm": {
+          "_created": 1688647113111,
+          "stateKey": "Legionellenprogramm",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Legionellenprogramm",
+          "_updated": 1688647148018,
+          "label": "Legionellenprogramm",
+          "actionElement": "SwitchAction"
+        },
+        "Kühlen Automatik": {
+          "_created": 1687248835601,
+          "stateKey": "Kühlen Automatik",
+          "showState": false,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlen_automatik",
+          "_updated": 1687248871613,
+          "label": "Kühlen Automatik",
+          "actionElement": "SwitchAction"
+        },
+        "Kühlkurve": {
+          "_created": 1686723944696,
+          "stateKey": "Kühlkurve",
+          "showState": false,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Steigerung_Kühlkurve",
+          "_updated": 1686724062674,
+          "label": "Kühlkurve",
+          "actionElement": "InputAction",
+          "InputActionConfig": {
+            "val": "val"
+          }
+        },
+        "SG Ready Start-Time": {
+          "_created": 1686573132425,
+          "stateKey": "SG Ready Start-Time",
+          "showState": true,
+          "label": "SG Ready Start-Time",
+          "_updated": 1686573152164,
+          "state": "0_userdata.0.Heizung.Steuerung.SG_Ready_Start_time",
+          "actionElement": "TimePickerAction"
+        },
+        "Raum Start Temp": {
+          "_created": 1686564148743,
+          "stateKey": "Raum Start Temp",
+          "showState": false,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.StartTemp",
+          "_updated": 1718616671710,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.StartTemp",
+          "label": "Raum Start Temp",
+          "unit": "C",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "15",
+            "max": "25"
+          }
+        },
+        "Raum Soll Temp": {
+          "_created": 1686564139469,
+          "stateKey": "Raum Soll Temp",
+          "showState": false,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.RaumSoll",
+          "_updated": 1718616654630,
+          "label": "Raum Soll Temp",
+          "unit": "C",
+          "actionElement": null,
+          "properties": {
+            "min": "18",
+            "max": "24"
+          },
+          "bodyElement": "LevelBody"
+        },
+        "Außentemp Grenze Kühlen": {
+          "_created": 1686564127589,
+          "stateKey": "Außentemp Grenze Kühlen",
+          "showState": false,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Außentemp_Grenze",
+          "_updated": 1718616624911,
+          "label": "Außentemperatur Grenze",
+          "unit": "C",
+          "actionElement": null,
+          "properties": {
+            "min": "15",
+            "max": "25"
+          },
+          "bodyElement": "LevelBody"
+        },
+        "Kühlen Aktiv": {
+          "_created": 1686564106436,
+          "stateKey": "Kühlen Aktiv",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kuehlen_Aktiv",
+          "_updated": 1686564352451,
+          "label": "Kühlen Aktiv",
+          "actionElement": "SwitchAction"
+        },
+        "SG Ready Aktiv": {
+          "_created": 1684822243681,
+          "stateKey": "SG Ready Aktiv",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.SG_Ready_Aktiv",
+          "_updated": 1684822418728,
+          "state": "0_userdata.0.Heizung.Steuerung.SG_Ready_Aktiv",
+          "label": "SG Ready Aktiv",
+          "actionElement": "SwitchAction"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "_created": 1672823889621,
+        "_updated": 1753694932616
+      },
+      "id": "38b23963-0094-4ee9-91fe-ce2944e6e61e",
+      "revision": "c00a5"
+    },
+    "f9b38f96-75e0-45a3-b8b7-529d3d6109dc": {
+      "name": "Heizung Heizzeiten",
+      "icon": "",
+      "label": "",
+      "function": "heating",
+      "states": {
+        "Peridoe 1 Aktiv": {
+          "_created": 1765196917769,
+          "stateKey": "Peridoe 1 Aktiv",
+          "showState": false,
+          "actionElement": "SwitchAction",
+          "_updated": 1765196988070,
+          "SwitchActionConfig": {
+            "ack": true
+          },
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode1_aktiv",
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode1_aktiv",
+          "label": "Periode 1 Aktiv"
+        },
+        "Periode 1 VON": {
+          "_created": 1765196908207,
+          "stateKey": "Periode 1 VON",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode1_von",
+          "_updated": 1765197021509,
+          "label": "Periode 1 VON",
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {
+            "ack": true
+          }
+        },
+        "Periode 1 BIS": {
+          "_created": 1765196900259,
+          "stateKey": "Periode 1 BIS",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode1_bis",
+          "_updated": 1765197101382,
+          "label": "Periode 1 BIS",
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {
+            "ack": true
+          }
+        },
+        "Peridoe 2 Aktiv": {
+          "_created": 1765196917769,
+          "stateKey": "Peridoe 2 Aktiv",
+          "showState": false,
+          "actionElement": "SwitchAction",
+          "_updated": 1765197553643,
+          "SwitchActionConfig": {
+            "ack": true
+          },
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode2_aktiv",
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode2_aktiv",
+          "label": "Periode 2 Aktiv",
+          "_copied": 1765197527986
+        },
+        "Periode 2 VON": {
+          "_created": 1765196908207,
+          "stateKey": "Periode 2 VON",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode2_von",
+          "_updated": 1765197615814,
+          "label": "Periode 2 VON",
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {
+            "ack": true
+          },
+          "_copied": 1765197562753
+        },
+        "Periode 2 BIS": {
+          "_created": 1765196900259,
+          "stateKey": "Periode 2 BIS",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode2_bis",
+          "_updated": 1765197635940,
+          "label": "Periode 2 BIS",
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {
+            "ack": true
+          },
+          "_copied": 1765197567660
+        },
+        "Peridoe 3 Aktiv": {
+          "_created": 1765196917769,
+          "stateKey": "Peridoe 3 Aktiv",
+          "showState": false,
+          "actionElement": "SwitchAction",
+          "_updated": 1765197681048,
+          "SwitchActionConfig": {
+            "ack": true
+          },
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode3_aktiv",
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode3_aktiv",
+          "label": "Periode 3 Aktiv",
+          "_copied": 1765197642448
+        },
+        "Periode 3 VON": {
+          "_created": 1765196908207,
+          "stateKey": "Periode 3 VON",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode3_von",
+          "_updated": 1765197695724,
+          "label": "Periode 3 VON",
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {
+            "ack": true
+          },
+          "_copied": 1765197646433
+        },
+        "Periode 3 BIS": {
+          "_created": 1765196900259,
+          "stateKey": "Periode 3 BIS",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.Helper_States.Periode3_bis",
+          "_updated": 1765197706177,
+          "label": "Periode 3 BIS",
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {
+            "ack": true
+          },
+          "_copied": 1765197649258
+        }
+      },
+      "options": {},
+      "id": "f9b38f96-75e0-45a3-b8b7-529d3d6109dc",
+      "attributes": {
+        "_created": 1765196855768,
+        "_updated": 1765197520941
+      },
+      "revision": "6ea61"
+    },
+    "e02c7199-52d3-48db-b1f7-4f33f6a67d4a": {
+      "name": "Verdichter",
+      "icon": "heat-pump",
+      "label": "",
+      "function": "heating",
+      "states": {
+        "Starts Heute": {
+          "stateKey": "Starts Heute",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.VD_Starts_Heute",
+          "label": "Starts Heute"
+        },
+        "Starts Gestern": {
+          "stateKey": "Starts Gestern",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.VD_Starts_Gestern_Netto",
+          "label": "Starts Gestern"
+        },
+        "Laufzeit Heute": {
+          "stateKey": "Laufzeit Heute",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.VD_Laufzeit_Heute",
+          "unit": "h",
+          "label": "Laufzeit Heute"
+        },
+        "Laufzeit Gestern": {
+          "stateKey": "Laufzeit Gestern",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.VD_Laufzeit_Gestern_netto",
+          "label": "Laufzeit Gestern",
+          "unit": "h"
+        },
+        "Laufzeit Gesamt": {
+          "stateKey": "Laufzeit Gesamt",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.VD_Laufzeit_Gesamt",
+          "unit": "h",
+          "label": "Laufzeit Gesamt"
+        },
+        "Starts Gesamt": {
+          "stateKey": "Starts Gesamt",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.VD_Starts_Gesamt",
+          "label": "Starts Gesamt"
+        }
+      },
+      "options": {},
+      "attributes": {},
+      "id": "e02c7199-52d3-48db-b1f7-4f33f6a67d4a",
+      "revision": "acdf5"
+    },
+    "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1": {
+      "name": "Klimaanlage Brüo",
+      "icon": "air-conditioner",
+      "label": "",
+      "function": "heating",
+      "states": {
+        "Power": {
+          "_created": 1746701479721,
+          "stateKey": "Power",
+          "showState": true,
+          "action": "tuya.0.17415888c4d8d5216e63.1",
+          "_updated": 1746704115299,
+          "state": "tuya.0.17415888c4d8d5216e63.1",
+          "label": "Power",
+          "actionElement": "SwitchAction"
+        },
+        "Modus": {
+          "_created": 1746701493400,
+          "stateKey": "Modus",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d5216e63.4",
+          "_updated": 1746701659791,
+          "label": "Modus",
+          "display": {
+            "0": "cold",
+            "1": "hot",
+            "2": "wet",
+            "3": "wind",
+            "4": "auto"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Aktuelle Temperatur": {
+          "_created": 1746790087064,
+          "stateKey": "Aktuelle Temperatur",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d5216e63.3",
+          "_updated": 1746790117904,
+          "label": "Aktuelle Temperatur",
+          "unit": "°C"
+        },
+        "Temperatur": {
+          "_created": 1746701488878,
+          "stateKey": "Temperatur",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d5216e63.2",
+          "_updated": 1746702138806,
+          "label": "Temperatur",
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "15"
+          },
+          "unit": "°C",
+          "properties": {
+            "min": 16,
+            "max": 31
+          }
+        },
+        "Lüfter": {
+          "_created": 1746701506657,
+          "stateKey": "Lüfter",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d5216e63.5",
+          "_updated": 1746701800578,
+          "label": "Lüfter",
+          "display": {
+            "0": "strong",
+            "1": "high",
+            "2": "mid_high",
+            "3": "mid",
+            "4": "mid_low",
+            "5": "low",
+            "6": "mute",
+            "7": "auto"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Swipe up/down": {
+          "_created": 1746701529940,
+          "stateKey": "Swipe up/down",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d5216e63.113",
+          "_updated": 1746703119203,
+          "label": "Hoch/Runter Bewegung",
+          "display": {
+            "0": "Top",
+            "1": "Up-Down"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Swipe left/right": {
+          "_created": 1746701522208,
+          "stateKey": "Swipe left/right",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d5216e63.114",
+          "_updated": 1746703054712,
+          "label": "Links/Rechts Bewegung",
+          "display": {
+            "0": "Middle-Fix",
+            "1": "Left-Right-Flow",
+            "4": "Right-Flow"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Lokale Verbindung": {
+          "_created": 1746703604542,
+          "stateKey": "Lokale Verbindung",
+          "showState": true,
+          "label": "Lokale Verbindung",
+          "_updated": 1746703635825,
+          "state": "tuya.0.17415888c4d8d5216e63.online"
+        }
+      },
+      "options": {},
+      "id": "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1",
+      "attributes": {
+        "_created": 1746701399858,
+        "_updated": 1746790076920
+      },
+      "revision": "4edfb"
+    },
+    "e07e04d2-7923-45c0-9324-0b262f822e78": {
+      "name": "Klimaanlage Sicherung",
+      "icon": "",
+      "label": "",
+      "function": "_defaults",
+      "states": {
+        "Hauptschalter": {
+          "_created": 1746703261496,
+          "stateKey": "Hauptschalter",
+          "showState": true,
+          "state": "shelly.1.shellypro2pm#ec626090c7d4#1.Relay0.Switch",
+          "_updated": 1746703762305,
+          "label": "Hauptschalter",
+          "actionElement": "SwitchAction"
+        },
+        "Verbrauch": {
+          "_created": 1746703269659,
+          "stateKey": "Verbrauch",
+          "showState": true,
+          "state": "shelly.1.shellypro2pm#ec626090c7d4#1.Relay0.Power",
+          "_updated": 1746703410161,
+          "unit": "W",
+          "label": "Momentanverbrauch"
+        },
+        "Verbrauch Total": {
+          "_created": 1746703277639,
+          "stateKey": "Verbrauch Total",
+          "showState": true,
+          "state": "shelly.1.shellypro2pm#ec626090c7d4#1.Relay0.Energy",
+          "_updated": 1746703399280,
+          "label": "Gesamtverbrauch",
+          "unit": "Wh"
+        }
+      },
+      "options": {},
+      "id": "e07e04d2-7923-45c0-9324-0b262f822e78",
+      "attributes": {
+        "_created": 1746703246560,
+        "_updated": 1746703751851
+      },
+      "revision": "80bc3"
+    },
+    "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_f309b": {
+      "name": "Klimaanlage Wohnzimmer",
+      "icon": "air-conditioner",
+      "label": "",
+      "function": "heating",
+      "states": {
+        "Power": {
+          "_created": 1746701479721,
+          "stateKey": "Power",
+          "showState": true,
+          "action": "tuya.0.17415888c4d8d521377a.1",
+          "_updated": 1746704123438,
+          "state": "tuya.0.17415888c4d8d521377a.1",
+          "label": "Power",
+          "actionElement": "SwitchAction"
+        },
+        "Modus": {
+          "_created": 1746701493400,
+          "stateKey": "Modus",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d521377a.4",
+          "_updated": 1746703918760,
+          "label": "Modus",
+          "display": {
+            "0": "cold",
+            "1": "hot",
+            "2": "wet",
+            "3": "wind",
+            "4": "auto"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Aktuelle Temperatur": {
+          "_created": 1746790040640,
+          "stateKey": "Aktuelle Temperatur",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d521377a.3",
+          "_updated": 1746790123769,
+          "unit": "°C",
+          "label": "Aktuelle Temperatur"
+        },
+        "Temperatur": {
+          "_created": 1746701488878,
+          "stateKey": "Temperatur",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d521377a.2",
+          "_updated": 1746703927727,
+          "label": "Temperatur",
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "15"
+          },
+          "unit": "°C",
+          "properties": {
+            "min": 16,
+            "max": 31
+          }
+        },
+        "Lüfter": {
+          "_created": 1746701506657,
+          "stateKey": "Lüfter",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d521377a.5",
+          "_updated": 1746703932190,
+          "label": "Lüfter",
+          "display": {
+            "0": "strong",
+            "1": "high",
+            "2": "mid_high",
+            "3": "mid",
+            "4": "mid_low",
+            "5": "low",
+            "6": "mute",
+            "7": "auto"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Swipe up/down": {
+          "_created": 1746701529940,
+          "stateKey": "Swipe up/down",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d521377a.113",
+          "_updated": 1746703936303,
+          "label": "Hoch/Runter Bewegung",
+          "display": {
+            "0": "Top",
+            "1": "Up-Down"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Swipe left/right": {
+          "_created": 1746701522208,
+          "stateKey": "Swipe left/right",
+          "showState": true,
+          "state": "tuya.0.17415888c4d8d521377a.114",
+          "_updated": 1746703940654,
+          "label": "Links/Rechts Bewegung",
+          "display": {
+            "0": "Middle-Fix",
+            "1": "Left-Right-Flow",
+            "4": "Right-Flow"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Lokale Verbindung": {
+          "_created": 1746703604542,
+          "stateKey": "Lokale Verbindung",
+          "showState": true,
+          "label": "Lokale Verbindung",
+          "_updated": 1746703944856,
+          "state": "tuya.0.17415888c4d8d521377a.online"
+        }
+      },
+      "options": {},
+      "id": "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_f309b",
+      "attributes": {
+        "_created": 1746701399858,
+        "_updated": 1746790120761,
+        "_copied": 1746703820762
+      },
+      "revision": "351a9"
+    },
+    "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_69be6": {
+      "name": "Klimaanlage Schlafzimmer",
+      "icon": "air-conditioner",
+      "label": "",
+      "function": "heating",
+      "states": {
+        "Power": {
+          "_created": 1746701479721,
+          "stateKey": "Power",
+          "showState": true,
+          "action": "tuya.0.1741588824d7ebe39fcb.1",
+          "_updated": 1747771924169,
+          "state": "tuya.0.1741588824d7ebe39fcb.1",
+          "label": "Power",
+          "actionElement": "SwitchAction"
+        },
+        "Modus": {
+          "_created": 1746701493400,
+          "stateKey": "Modus",
+          "showState": true,
+          "state": "tuya.0.1741588824d7ebe39fcb.4",
+          "_updated": 1746874861359,
+          "label": "Modus",
+          "display": {
+            "0": "cold",
+            "1": "hot",
+            "2": "wet",
+            "3": "wind",
+            "4": "auto"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Aktuelle Temperatur": {
+          "_created": 1746790087064,
+          "stateKey": "Aktuelle Temperatur",
+          "showState": true,
+          "state": "tuya.0.1741588824d7ebe39fcb.3",
+          "_updated": 1746874865052,
+          "label": "Aktuelle Temperatur",
+          "unit": "°C"
+        },
+        "Temperatur": {
+          "_created": 1746701488878,
+          "stateKey": "Temperatur",
+          "showState": true,
+          "state": "tuya.0.1741588824d7ebe39fcb.2",
+          "_updated": 1750268495187,
+          "label": "Temperatur",
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "markStep": "10",
+            "step": "0.5"
+          },
+          "unit": "°C",
+          "properties": {
+            "min": 16,
+            "max": 26
+          }
+        },
+        "Lüfter": {
+          "_created": 1746701506657,
+          "stateKey": "Lüfter",
+          "showState": true,
+          "state": "tuya.0.1741588824d7ebe39fcb.5",
+          "_updated": 1746874876895,
+          "label": "Lüfter",
+          "display": {
+            "0": "strong",
+            "1": "high",
+            "2": "mid_high",
+            "3": "mid",
+            "4": "mid_low",
+            "5": "low",
+            "6": "mute",
+            "7": "auto"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Swipe up/down": {
+          "_created": 1746701529940,
+          "stateKey": "Swipe up/down",
+          "showState": true,
+          "state": "tuya.0.1741588824d7ebe39fcb.113",
+          "_updated": 1746874880820,
+          "label": "Hoch/Runter Bewegung",
+          "display": {
+            "0": "Top",
+            "1": "Up-Down"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Swipe left/right": {
+          "_created": 1746701522208,
+          "stateKey": "Swipe left/right",
+          "showState": true,
+          "state": "tuya.0.1741588824d7ebe39fcb.114",
+          "_updated": 1746874884594,
+          "label": "Links/Rechts Bewegung",
+          "display": {
+            "0": "Middle-Fix",
+            "1": "Left-Right-Flow",
+            "4": "Right-Flow"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Lokale Verbindung": {
+          "_created": 1746703604542,
+          "stateKey": "Lokale Verbindung",
+          "showState": true,
+          "label": "Lokale Verbindung",
+          "_updated": 1746874889745,
+          "state": "tuya.0.1741588824d7ebe39fcb.online"
+        }
+      },
+      "options": {},
+      "id": "3c80ee20-4fd4-4f16-96d2-4eccdcf314f1_69be6",
+      "attributes": {
+        "_created": 1746701399858,
+        "_updated": 1750268463739,
+        "_copied": 1746874840553
+      },
+      "revision": "442cd"
+    },
+    "f7fbeb6f-12d7-4446-a86a-f341cc73c7df": {
+      "name": "Lüftung",
+      "icon": "fan",
+      "label": "Lüftung",
+      "function": "fan",
+      "states": {
+        "Mode": {
+          "_created": 1754982891980,
+          "stateKey": "Mode",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Info.Mode",
+          "_updated": 1754982898879
+        },
+        "Automatik": {
+          "_created": 1754982917493,
+          "stateKey": "Automatik",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Automatik",
+          "_updated": 1754984002694,
+          "actionElement": "SwitchAction",
+          "label": "Automatikmodus"
+        },
+        "Status": {
+          "_created": 1752137119867,
+          "stateKey": "Status",
+          "showState": true,
+          "label": "Status",
+          "_updated": 1752137178114,
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.Relay0.Switch",
+          "actionElement": "SwitchAction"
+        },
+        "Level": {
+          "_created": 1752137127409,
+          "stateKey": "Level",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Level_control",
+          "_updated": 1754984030555,
+          "label": "Aktuelle Stufe",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 0,
+            "max": 4
+          },
+          "LevelBodyConfig": {
+            "markStep": "4"
+          }
+        },
+        "NightLevel": {
+          "_created": 1754982661347,
+          "stateKey": "NightLevel",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Config.NightLevel",
+          "_updated": 1754983926260,
+          "unit": "",
+          "properties": {
+            "min": "0",
+            "max": "4"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "markStep": "4"
+          },
+          "label": "Night Level"
+        },
+        "NightDeltaMin": {
+          "_created": 1754982539528,
+          "stateKey": "NightDeltaMin",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Config.NightDeltaMin",
+          "_updated": 1754989141253,
+          "unit": "K",
+          "properties": {
+            "min": "0",
+            "max": "3"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "1",
+            "markStep": "6"
+          },
+          "label": "Night Min Delta to room"
+        },
+        "DayLevel": {
+          "_created": 1754982418186,
+          "stateKey": "DayLevel",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Config.DayLevel",
+          "_updated": 1754983933471,
+          "unit": "",
+          "properties": {
+            "min": "0",
+            "max": "4"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "markStep": "4"
+          },
+          "label": "Day Level"
+        },
+        "WinterNight": {
+          "_created": 1754982739588,
+          "stateKey": "WinterNight",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Config.WinterLevel",
+          "_updated": 1754983945127,
+          "unit": "",
+          "properties": {
+            "min": "0",
+            "max": "4"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "markStep": "4"
+          },
+          "label": "Winter Night Level"
+        },
+        "WinterNightThreshold": {
+          "_created": 1754982795195,
+          "stateKey": "WinterNightThreshold",
+          "showState": true,
+          "state": "0_userdata.0.Lüftungsanlage.Config.WinterOutsideMin",
+          "_updated": 1754989230919,
+          "unit": "°C",
+          "properties": {
+            "min": "0",
+            "max": "15"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "15"
+          },
+          "label": "Lüftung aus/low ab °C in der Nacht"
+        },
+        "Gesamtverbrauch": {
+          "_created": 1752137144786,
+          "stateKey": "Gesamtverbrauch",
+          "showState": true,
+          "label": "Gesamtverbrauch",
+          "_updated": 1756893035493,
+          "unit": "Wh",
+          "state": "0_userdata.0.Lüftungsanlage.Info.Total_Energy"
+        },
+        "Momentanverbrauch": {
+          "_created": 1752137138214,
+          "stateKey": "Momentanverbrauch",
+          "showState": true,
+          "label": "Momentanverbrauch",
+          "_updated": 1752137444097,
+          "unit": "W",
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.Relay0.Power"
+        }
+      },
+      "options": {},
+      "id": "f7fbeb6f-12d7-4446-a86a-f341cc73c7df",
+      "attributes": {
+        "_created": 1752137092286,
+        "_updated": 1756893013662
+      },
+      "revision": "a74f0"
+    },
+    "14412c55-9592-48e9-b453-5202886e9d22": {
+      "name": "Grünbeck",
+      "icon": "",
+      "label": "",
+      "function": "household",
+      "states": {
+        "Kontrollmessung Wasserhärte": {
+          "_created": 1754989450392,
+          "stateKey": "Kontrollmessung Wasserhärte",
+          "showState": true,
+          "state": "0_userdata.0.Grünbeck.Kontrollmessung_Wasserhärte",
+          "_updated": 1754989523072,
+          "label": "Kontrollmessung Wasserhärte",
+          "unit": "dH",
+          "properties": {
+            "min": "0",
+            "max": "30"
+          },
+          "actionElement": "InputAction"
+        },
+        "Reset Salzvorrat": {
+          "_created": 1705681225681,
+          "stateKey": "Reset Salzvorrat",
+          "showState": true,
+          "state": "0_userdata.0.Grünbeck.Salzvorrat_reset",
+          "_updated": 1705681242068,
+          "actionElement": "IconState"
+        },
+        "Salzvorrat Limit": {
+          "_created": 1705681169247,
+          "stateKey": "Salzvorrat Limit",
+          "showState": true,
+          "label": "Salzvorrat Limit",
+          "_updated": 1705682094923,
+          "state": "0_userdata.0.Grünbeck.Salzvorrat_limit",
+          "unit": "g",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "1000",
+            "max": "5000"
+          },
+          "LevelBodyConfig": {}
+        },
+        "Salzvorrat": {
+          "_created": 1705681079880,
+          "stateKey": "Salzvorrat",
+          "showState": true,
+          "label": "Salzvorrat",
+          "_updated": 1705681093892,
+          "unit": "g",
+          "state": "0_userdata.0.Grünbeck.Salzvorrat"
+        },
+        "Wasser History": {
+          "stateKey": "Wasser History",
+          "showState": true,
+          "state": "gruenbeck.0.softliQ.D/BS40068858.water"
+        },
+        "Salz History": {
+          "stateKey": "Salz History",
+          "showState": true,
+          "state": "gruenbeck.0.softliQ.D/BS40068858.salt"
+        },
+        "Salzverbrauch gestern": {
+          "stateKey": "Salzverbrauch gestern",
+          "showState": true,
+          "state": "0_userdata.0.Grünbeck.Salzverbrauch_gestern",
+          "unit": "g"
+        },
+        "Salzverbrauch gesamt": {
+          "stateKey": "Salzverbrauch gesamt",
+          "showState": true,
+          "state": "gruenbeck.0.softliQ.D/BS40068858.Stream.msaltusage",
+          "unit": "g"
+        },
+        "Wasserverbrauch gestern": {
+          "stateKey": "Wasserverbrauch gestern",
+          "showState": true,
+          "state": "0_userdata.0.Grünbeck.Wasserverbrauch_gestern",
+          "unit": "L"
+        },
+        "Wasserverbrauch gesamt": {
+          "stateKey": "Wasserverbrauch gesamt",
+          "showState": true,
+          "state": "gruenbeck.0.softliQ.D/BS40068858.Stream.mcountwater1",
+          "unit": "l"
+        },
+        "Nächste Regeneration": {
+          "stateKey": "Nächste Regeneration",
+          "showState": true,
+          "state": "gruenbeck.0.softliQ.D/BS40068858.nextRegeneration",
+          "properties": {
+            "value": "val => !val ? '' : date(val,'dd.MM.yyy HH:mm')"
+          },
+          "_updated": 1705995051908
+        }
+      },
+      "options": {},
+      "attributes": {
+        "_created": 1705681042160,
+        "_updated": 1754989430317
+      },
+      "id": "14412c55-9592-48e9-b453-5202886e9d22",
+      "revision": "6b7b5"
+    },
+    "cabe35fd-72ef-4500-8ffb-4a5398f26d33": {
+      "name": "BMW",
+      "icon": "car-electric",
+      "label": "",
+      "function": "_defaults",
+      "states": {
+        "Verbrauch seit Laden": {
+          "_created": 1755177157665,
+          "stateKey": "Verbrauch seit Laden",
+          "showState": true,
+          "state": "0_userdata.0.Auto.BMWiX1_AvgSinceCharge_kWh_per_100km",
+          "_updated": 1755177176749,
+          "label": "Verbrauch seit laden",
+          "unit": "kWh/100km"
+        },
+        "Verbrauch Gesamt": {
+          "_created": 1755177074972,
+          "stateKey": "Verbrauch Gesamt",
+          "showState": true,
+          "state": "0_userdata.0.Auto.BMWiX1_Avg_kWh_per_100km",
+          "_updated": 1755177186787,
+          "label": "Verbrauch Gesamt",
+          "unit": "kWh/100km"
+        },
+        "Aktualisieren": {
+          "_created": 1675060641162,
+          "stateKey": "Aktualisieren",
+          "showState": false,
+          "state": "",
+          "_updated": 1700469222759,
+          "label": "Aktualisieren",
+          "icon": "refresh",
+          "actionElement": "IconButtonAction",
+          "action": "bmw.0.WBY61EF0405W24607.remotev2.force-refresh",
+          "properties": "",
+          "display": {
+            "(null)": ""
+          }
+        },
+        "LastStatusUpdate": {
+          "_created": 1674576519875,
+          "stateKey": "LastStatusUpdate",
+          "showState": true,
+          "state": "0_userdata.0.Auto.BMW.streaming.WBY61EF0405W24607.fields.vehicle.drivetrain.batteryManagement.header.timestamp",
+          "_updated": 1759580055340,
+          "icon": "clock",
+          "unit": "",
+          "properties": {
+            "value": "val => !val ? '' :  ('0' + (new Date(val)).getDate()).slice(-2) + '.' + ('0' + ((new Date(val)).getMonth() + 1)).slice(-2) + '.' + (new Date(val)).getFullYear() + ' - ' + ('0' + (new Date(val)).getHours()).slice(-2)+ ':' + ('0' + (new Date(val)).getMinutes()).slice(-2) + ' Uhr'"
+          }
+        },
+        "Reichweite": {
+          "_created": 1674575602831,
+          "stateKey": "Reichweite",
+          "showState": true,
+          "state": "0_userdata.0.Auto.BMW.streaming.WBY61EF0405W24607.fields.vehicle.drivetrain.electricEngine.kombiRemainingElectricRange.value",
+          "_updated": 1759579901034,
+          "unit": "km",
+          "icon": "map-marker-distance",
+          "label": "Reichweite",
+          "action": "0_userdata.0.Auto.BMW.streaming.WBY61EF0405W24607.fields.vehicle.drivetrain.electricEngine.kombiRemainingElectricRange.value"
+        },
+        "Ladekabel": {
+          "_created": 1674573576167,
+          "stateKey": "Ladekabel",
+          "showState": true,
+          "state": "0_userdata.0.Auto.BMW.streaming.WBY61EF0405W24607.fields.vehicle.body.chargingPort.status.value",
+          "_updated": 1759579953614,
+          "display": {
+            "CONNECTED": "Angesteckt",
+            "DISCONNECTED": "Nicht angesteckt"
+          },
+          "icon": "ev-plug-type2",
+          "iconStyle": {
+            "DISCONNECTED": {
+              "color": "red"
+            },
+            "CONNECTED": {
+              "color": "green"
+            }
+          },
+          "action": "0_userdata.0.Auto.BMW.streaming.WBY61EF0405W24607.fields.vehicle.body.chargingPort.status.value"
+        },
+        "LadeStatus": {
+          "_created": 1674573462307,
+          "stateKey": "LadeStatus",
+          "showState": true,
+          "state": "0_userdata.0.Auto.BMW.streaming.WBY61EF0405W24607.fields.vehicle.drivetrain.electricEngine.charging.status.value",
+          "_updated": 1759579996027,
+          "icon": {
+            "NOCHARGING": "ev-station",
+            "CHARGING": "ev-station blink",
+            "INVALID": "ev-station"
+          },
+          "display": {
+            "NOCHARGING": "Läd nicht",
+            "CHARGING": "Auto läd",
+            "INVALID": "Läd nicht"
+          },
+          "iconStyle": {
+            "NOCHARGING": {
+              "color": "red"
+            },
+            "CHARGING": {
+              "color": "green"
+            },
+            "INVALID": {
+              "color": "red"
+            }
+          }
+        },
+        "Akku": {
+          "_created": 1674573279679,
+          "stateKey": "Akku",
+          "showState": true,
+          "state": "0_userdata.0.Auto.BMW.streaming.WBY61EF0405W24607.fields.vehicle.drivetrain.batteryManagement.header.value",
+          "_updated": 1759580010065,
+          "label": "",
+          "icon": {
+            "<=10": "battery-10",
+            "<=20": "battery-20",
+            "<=30": "battery-30",
+            "<=40": "battery-40",
+            "<=50": "battery-50",
+            "<=60": "battery-60",
+            "<=70": "battery-70",
+            "<=80": "battery-80",
+            "<=90": "battery-90",
+            "<=100": "battery"
+          },
+          "unit": "%"
+        },
+        "Standort": {
+          "_created": 1674572991994,
+          "stateKey": "Standort",
+          "showState": true,
+          "state": "0_userdata.0.Auto.Standort",
+          "_updated": 1674642066442,
+          "icon": "car-electric"
+        }
+      },
+      "options": {},
+      "id": "cabe35fd-72ef-4500-8ffb-4a5398f26d33",
+      "attributes": {
+        "_created": 1674572941392,
+        "_updated": 1759580034673
+      },
+      "revision": "97857"
+    },
+    "abcb1f20-33b0-435a-ac61-c2f99912314a": {
+      "name": "Cupra",
+      "icon": "car-electric",
+      "label": "Cupra",
+      "function": "_defaults",
+      "states": {
+        "Verbrauch Gesamt": {
+          "_created": 1755177238140,
+          "stateKey": "Verbrauch Gesamt",
+          "showState": true,
+          "label": "Verbrauch Gesamt",
+          "_updated": 1755177253725,
+          "state": "0_userdata.0.Auto.CupraBorn_Avg_kWh_per_100km",
+          "unit": "kWh/100km"
+        },
+        "Verbrauch seit Laden": {
+          "_created": 1755177210153,
+          "stateKey": "Verbrauch seit Laden",
+          "showState": true,
+          "state": "0_userdata.0.Auto.CupraBorn_AvgSinceCharge_kWh_per_100km",
+          "_updated": 1755177229094,
+          "label": "Verbrauch seit Laden",
+          "unit": "kWh/100km"
+        },
+        "LastUpdated": {
+          "_created": 1674643489398,
+          "stateKey": "LastUpdated",
+          "showState": true,
+          "state": "vw-connect.0.VSSZZZK16SP027655.statusv2.updatedAt",
+          "_updated": 1742193334182,
+          "label": "Letzte Aktualisierung",
+          "properties": {
+            "value": "val => date(val,'EEEE dd.MM.yyyy HH:mm:ss')"
+          },
+          "icon": "clock"
+        },
+        "SoC": {
+          "_created": 1742193441240,
+          "stateKey": "SoC",
+          "showState": true,
+          "state": "vw-connect.0.VSSZZZK16SP027655.charging.status.battery.currentSOC_pct",
+          "_updated": 1742193553744,
+          "label": "Akku SoC",
+          "unit": "%",
+          "icon": {
+            "<=10": "battery-10",
+            "<=20": "battery-20",
+            "<=30": "battery-30",
+            "<=40": "battery-40",
+            "<=50": "battery-50",
+            "<=60": "battery-60",
+            "<=70": "battery-70",
+            "<=80": "battery-80",
+            "<=90": "battery-90",
+            "<=100": "battery"
+          }
+        },
+        "Ladestatus": {
+          "_created": 1742193922432,
+          "stateKey": "Ladestatus",
+          "showState": true,
+          "state": "vw-connect.0.VSSZZZK16SP027655.charging.status.charging.chargingState",
+          "_updated": 1755177532636,
+          "label": "Ladestatus",
+          "display": {
+            "NOT_CHARGING": "Läd nicht",
+            "CHARGING": "Auto läd",
+            "INVALID": "Läd nicht"
+          },
+          "icon": {
+            "NOT_CHARGING": "ev-station",
+            "CHARGING": "ev-station blink",
+            "INVALID": "ev-station"
+          },
+          "iconStyle": {
+            "NOT_CHARGING": {
+              "color": "red"
+            },
+            "CHARGING": {
+              "color": "green"
+            },
+            "INVALID": {
+              "color": "red"
+            }
+          }
+        },
+        "Ladekabel": {
+          "_created": 1742193877243,
+          "stateKey": "Ladekabel",
+          "showState": true,
+          "state": "vw-connect.0.VSSZZZK16SP027655.charging.status.plug.plugConnectionState",
+          "_updated": 1755177588857,
+          "label": "Ladekabel",
+          "display": {
+            "connected": "Angesteckt",
+            "not connected": "Nicht angesteckt"
+          },
+          "icon": "ev-plug-type2",
+          "iconStyle": {
+            "not connected": {
+              "color": "red"
+            },
+            "connected": {
+              "color": "green"
+            }
+          }
+        },
+        "Klimatisieren": {
+          "_created": 1742193584324,
+          "stateKey": "Klimatisieren",
+          "showState": true,
+          "state": "vw-connect.0.VSSZZZK16SP027655.remote.climatisation",
+          "_updated": 1742193839481,
+          "actionElement": "ButtonGroupAction",
+          "ButtonGroupActionConfig": {},
+          "label": "Klimatisieren"
+        },
+        "Klimatisieren Status": {
+          "_created": 1742193832388,
+          "stateKey": "Klimatisieren Status",
+          "showState": true,
+          "label": "Klimatisieren Status",
+          "_updated": 1742193855671,
+          "state": "vw-connect.0.VSSZZZK16SP027655.climatisation.data.climatisationStatus.climatisationState"
+        },
+        "Kilometerstand": {
+          "_created": 1674641717932,
+          "stateKey": "Kilometerstand",
+          "showState": true,
+          "state": "vw-connect.0.VSSZZZK16SP027655.mileage.mileageKm",
+          "_updated": 1742193387228,
+          "label": "Kilometerstand",
+          "unit": "km",
+          "icon": "map-marker-distance"
+        },
+        "Restreichweite": {
+          "_created": 1674641706282,
+          "stateKey": "Restreichweite",
+          "showState": true,
+          "state": "vw-connect.0.VSSZZZK16SP027655.range.primary.rangeInKm",
+          "_updated": 1742193406051,
+          "icon": "gas-station",
+          "label": "Reichweite",
+          "unit": "km"
+        },
+        "Standort": {
+          "_created": 1674641695656,
+          "stateKey": "Standort",
+          "showState": true,
+          "state": "0_userdata.0.Auto.VWStandort",
+          "_updated": 1742194773499,
+          "label": "Cupra",
+          "unit": "",
+          "icon": "car"
+        }
+      },
+      "options": {},
+      "id": "abcb1f20-33b0-435a-ac61-c2f99912314a",
+      "attributes": {
+        "_created": 1674641676095,
+        "_updated": 1755177555266
+      },
+      "revision": "b57af"
+    },
+    "5ca40baa-8210-4a3c-a618-bb1df47427d0": {
+      "name": "Dreame",
+      "icon": "robot-vacuum",
+      "label": "",
+      "function": "vacuum",
+      "states": {
+        "Status": {
+          "_created": 1733139547553,
+          "stateKey": "Status",
+          "showState": true,
+          "state": "0_userdata.0.Dreame.Status",
+          "_updated": 1733163483710,
+          "label": "Status",
+          "display": {
+            "1": "Sweeping",
+            "2": "Idle",
+            "3": "Paused",
+            "4": "Error",
+            "5": "Go Charging",
+            "6": "Charging",
+            "7": "Mopping",
+            "8": "Drying",
+            "9": "Washing",
+            "10": "Go Washing",
+            "11": "Building",
+            "12": "Sweeping and Mopping",
+            "13": "Charging Completed",
+            "14": "Upgrading",
+            "15": "Summon",
+            "16": "Self Repairing",
+            "17": "Back Install Mop",
+            "18": "Back Remove Mop"
+          }
+        },
+        "Zur Ladestation": {
+          "_created": 1733139121444,
+          "stateKey": "Zur Ladestation",
+          "showState": false,
+          "state": "0_userdata.0.Dreame.Laden",
+          "_updated": 1733140879402,
+          "label": "Zur Basisstation",
+          "actionElement": "ButtonAction",
+          "icon": "robot-vacuum-off"
+        },
+        "Alles Saugen/Wischen": {
+          "_created": 1733139108441,
+          "stateKey": "Alles Saugen/Wischen",
+          "showState": false,
+          "action": "0_userdata.0.Dreame.CleanAll",
+          "_updated": 1733139166205,
+          "state": "0_userdata.0.Dreame.CleanAll",
+          "label": "Alles Saugen/Wischen",
+          "actionElement": "ButtonAction"
+        },
+        "Nur Saugen": {
+          "_created": 1733139099392,
+          "stateKey": "Nur Saugen",
+          "showState": false,
+          "state": "0_userdata.0.Dreame.Saugen",
+          "_updated": 1733139230920,
+          "label": "Nur Saugen",
+          "actionElement": "ButtonAction"
+        }
+      },
+      "options": {},
+      "id": "5ca40baa-8210-4a3c-a618-bb1df47427d0",
+      "attributes": {
+        "_created": 1733139060446,
+        "_updated": 1733163459203
+      },
+      "revision": "0d9de"
+    },
+    "c17ee98f-6bbe-43bc-9823-11ea9ae9f7ec": {
+      "name": "Wattpilot",
+      "icon": "wallbox",
+      "label": "",
+      "function": "_defaults",
+      "states": {
+        "PV Akku Grenze": {
+          "_created": 1742471215001,
+          "stateKey": "PV Akku Grenze",
+          "showState": true,
+          "action": "0_userdata.0.PV.Wattpilot.PV_Akku_Grenzwert",
+          "_updated": 1742479077020,
+          "state": "0_userdata.0.PV.Wattpilot.PV_Akku_Grenzwert",
+          "label": "PV Akku Grenze",
+          "unit": "%",
+          "actionElement": null,
+          "DropdownActionConfig": {
+            "val": "value"
+          },
+          "display": "",
+          "properties": "",
+          "InputActionConfig": {
+            "val": "val"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {}
+        },
+        "Laden erlaubt?": {
+          "_created": 1742464972716,
+          "stateKey": "Laden erlaubt?",
+          "showState": true,
+          "state": "fronius-wattpilot.0.frc",
+          "_updated": 1742465200945,
+          "label": "Laden erlaubt?",
+          "properties": "",
+          "display": {
+            "0": "Erlaubt",
+            "1": "Gestoppt",
+            "2": "Frociert"
+          }
+        },
+        "Laden Starten/Stoppen": {
+          "_created": 1742464112964,
+          "stateKey": "Laden Starten/Stoppen",
+          "showState": true,
+          "action": "fronius-wattpilot.0.set_state",
+          "_updated": 1742464865677,
+          "label": "Laden Erlauben/Stoppen",
+          "display": {
+            "frc;0": "Erlauben",
+            "frc;1": "Stoppen"
+          },
+          "actionElement": "DropdownAction",
+          "state": "fronius-wattpilot.0.frc"
+        },
+        "Auto angeschlossen": {
+          "_created": 1742464064211,
+          "stateKey": "Auto angeschlossen",
+          "showState": true,
+          "state": "0_userdata.0.Auto.Which_car_is_charging",
+          "_updated": 1742464075545,
+          "label": "Auto angeschlossen"
+        },
+        "Status": {
+          "_created": 1742462538351,
+          "stateKey": "Status",
+          "showState": true,
+          "state": "0_userdata.0.Auto.ChargingStatus",
+          "_updated": 1742463890921,
+          "label": "Status",
+          "display": {
+            "0": "NotChargingBecauseNoChargeCtrlData",
+            "1": "NotChargingBecauseOvertemperature",
+            "2": "NotChargingBecauseAccessControlWait",
+            "3": "ChargingBecauseForceStateOn",
+            "4": "NotChargingBecauseForceStateOff",
+            "5": "NotChargingBecauseScheduler",
+            "6": "NotChargingBecauseEnergyLimit",
+            "7": "ChargingBecauseAwattarPriceLow",
+            "8": "ChargingBecauseAutomaticStopTestLadung",
+            "9": "ChargingBecauseAutomaticStopNotEnoughTime",
+            "10": "ChargingBecauseAutomaticStop",
+            "11": "ChargingBecauseAutomaticStopNoClock",
+            "12": "ChargingBecausePvSurplus",
+            "13": "ChargingBecauseFallbackGoEDefault",
+            "14": "ChargingBecauseFallbackGoEScheduler",
+            "15": "ChargingBecauseFallbackDefault",
+            "16": "NotChargingBecauseFallbackGoEAwattar",
+            "17": "NotChargingBecauseFallbackAwattar",
+            "18": "NotChargingBecauseFallbackAutomaticStop",
+            "19": "ChargingBecauseCarCompatibilityKeepAlive",
+            "20": "ChargingBecauseChargePauseNotAllowed",
+            "22": "NotChargingBecauseSimulateUnplugging",
+            "23": "NotChargingBecausePhaseSwitch",
+            "24": "NotChargingBecauseMinPauseDuration",
+            "26": "NotChargingBecauseError",
+            "27": "NotChargingBecauseLoadManagementDoesntWant",
+            "28": "NotChargingBecauseOcppDoesntWant",
+            "29": "NotChargingBecauseReconnectDelay",
+            "30": "NotChargingBecauseAdapterBlocking",
+            "31": "NotChargingBecauseUnderfrequencyControl",
+            "32": "NotChargingBecauseUnbalancedLoad",
+            "33": "ChargingBecauseDischargingPvBattery",
+            "34": "NotChargingBecauseGridMonitoring",
+            "35": "NotChargingBecauseOcppFallback"
+          }
+        },
+        "Lademodus": {
+          "_created": 1742462520358,
+          "stateKey": "Lademodus",
+          "showState": true,
+          "state": "0_userdata.0.Auto.ChargingMode",
+          "_updated": 1742462786661,
+          "label": "Lademodus"
+        },
+        "Ladeleistung": {
+          "_created": 1742462529370,
+          "stateKey": "Ladeleistung",
+          "showState": true,
+          "state": "0_userdata.0.PV.WattpilotPower",
+          "_updated": 1742462740961,
+          "label": "Leistung",
+          "unit": "Wh"
+        },
+        "Lademodus ändern": {
+          "_created": 1742462860086,
+          "stateKey": "Lademodus ändern",
+          "showState": true,
+          "state": "fronius-wattpilot.0.set_mode",
+          "_updated": 1742463544958,
+          "label": "Lademodus ändern",
+          "display": {
+            "3": "Netz-laden",
+            "4": "PV-Überschuss"
+          },
+          "actionElement": "DropdownAction",
+          "DropdownActionConfig": {
+            "val": "val"
+          }
+        },
+        "Laden unterbrochen": {
+          "_created": 1742462563120,
+          "stateKey": "Laden unterbrochen",
+          "showState": true,
+          "state": "0_userdata.0.PV.Wattpilot.Ladung_unterbrochen",
+          "_updated": 1742462587191,
+          "label": "Laden unterbrochen"
+        },
+        "Sperrautomatik": {
+          "_created": 1742462553390,
+          "stateKey": "Sperrautomatik",
+          "showState": true,
+          "state": "0_userdata.0.PV.Wattpilot.Wattpilot_Sperrautomatik",
+          "_updated": 1742462614215,
+          "label": "Sperrautomatik",
+          "actionElement": "SwitchAction"
+        }
+      },
+      "options": {},
+      "id": "c17ee98f-6bbe-43bc-9823-11ea9ae9f7ec",
+      "attributes": {
+        "_created": 1742462484158,
+        "_updated": 1742479050230
+      },
+      "revision": "6c01f"
+    },
+    "77211b9d-86f8-4b52-a804-9ad10056b94c": {
+      "name": "Rollläden Automatik",
+      "icon": "",
+      "label": "",
+      "function": "blind",
+      "states": {
+        "Dunkelheit": {
+          "_created": 1684906062356,
+          "stateKey": "Dunkelheit",
+          "showState": true,
+          "state": "0_userdata.0.Dusk",
+          "_updated": 1684906252373,
+          "label": "Dunkelheit",
+          "icon": "weather-sunset-down"
+        },
+        "Sonnenaufgang": {
+          "_created": 1684906041828,
+          "stateKey": "Sonnenaufgang",
+          "showState": true,
+          "state": "0_userdata.0.Sunrise",
+          "_updated": 1684906193854,
+          "label": "Sonnenaufgang",
+          "icon": "sunrise"
+        },
+        "Zeitpunkt Öffnen Wochenende frühstens": {
+          "_created": 1684835808354,
+          "stateKey": "Zeitpunkt Öffnen Wochenende frühstens",
+          "showState": true,
+          "state": "0_userdata.0.Rollläden_Erdgeschoss.Wochenende_opentime",
+          "_updated": 1684836270413,
+          "actionElement": "TimePickerAction",
+          "label": "Zeitpunkt Öffnen Wochenende frühstens"
+        },
+        "Zeitpunkt Öffnen Woche frühstens": {
+          "_created": 1684835792723,
+          "stateKey": "Zeitpunkt Öffnen Woche frühstens",
+          "showState": true,
+          "label": "Zeitpunkt Öffnen Woche frühstens",
+          "_updated": 1684836297225,
+          "state": "0_userdata.0.Rollläden_Erdgeschoss.Woche_opentime",
+          "actionElement": "TimePickerAction"
+        },
+        "Automatik Wochenende Schließen": {
+          "_created": 1684835759098,
+          "stateKey": "Automatik Wochenende Schließen",
+          "showState": true,
+          "label": "Automatik Wochenende Schließen",
+          "_updated": 1684836353794,
+          "state": "0_userdata.0.Rollläden_Erdgeschoss.Automatik_Wochenende_close",
+          "actionElement": "SwitchAction"
+        },
+        "Automatik Wochenende Öffnen": {
+          "_created": 1684835746910,
+          "stateKey": "Automatik Wochenende Öffnen",
+          "showState": true,
+          "label": "Automatik Wochenende Öffnen",
+          "_updated": 1684836381965,
+          "state": "0_userdata.0.Rollläden_Erdgeschoss.Automatik_Wocheende_open",
+          "actionElement": "SwitchAction"
+        },
+        "Automatik Woche Schließen": {
+          "_created": 1684835734099,
+          "stateKey": "Automatik Woche Schließen",
+          "showState": true,
+          "label": "Automatik Woche Schließen",
+          "_updated": 1684836408969,
+          "state": "0_userdata.0.Rollläden_Erdgeschoss.Automatik_Woche_close",
+          "actionElement": "SwitchAction"
+        },
+        "Automatik Woche Öffnen": {
+          "_created": 1684835721955,
+          "stateKey": "Automatik Woche Öffnen",
+          "showState": true,
+          "label": "Automatik Woche Öffnen",
+          "_updated": 1684836432675,
+          "state": "0_userdata.0.Rollläden_Erdgeschoss.Automatik_Woche_open",
+          "actionElement": "SwitchAction"
+        }
+      },
+      "options": {},
+      "id": "77211b9d-86f8-4b52-a804-9ad10056b94c",
+      "attributes": {
+        "_created": 1684835667659,
+        "_updated": 1684906151622
+      },
+      "revision": "99034"
+    },
+    "rollladenessecke_9b1fd": {
+      "id": "rollladenessecke_9b1fd",
+      "name": "Rollladen Essecke",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE766E55#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE766E55#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE766E55#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE766E55#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE766E55#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladencouchecke_eb203": {
+      "id": "rollladencouchecke_eb203",
+      "name": "Rollladen Couchecke",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE78E06E#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE78E06E#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE78E06E#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE78E06E#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE78E06E#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "deviceshplg-s#4022d889bb9b#1_8c38d": {
+      "id": "deviceshplg-s#4022d889bb9b#1_8c38d",
+      "name": "Device SHPLG-S#4022D889BB9B#1",
+      "function": "other",
+      "states": {
+        "power": {
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.Relay0.Switch",
+          "action": "shelly.0.SHPLG-S#4022D889BB9B#1.Relay0.Switch",
+          "actionElement": "SwitchAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.firmware",
+          "action": "shelly.0.SHPLG-S#4022D889BB9B#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHPLG-S#4022D889BB9B#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rolladentechnik_36755": {
+      "id": "rolladentechnik_36755",
+      "name": "Rolladen Technik",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE793D84#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE793D84#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE793D84#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE793D84#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE793D84#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE793D84#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE793D84#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE793D84#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE793D84#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE793D84#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE793D84#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladengast_7f884": {
+      "id": "rollladengast_7f884",
+      "name": "Rollladen Gast",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE6BF0E7#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE6BF0E7#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE6BF0E7#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE6BF0E7#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE6BF0E7#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE6BF0E7#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE6BF0E7#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE6BF0E7#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE6BF0E7#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE6BF0E7#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE6BF0E7#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenbadnord_2b78b": {
+      "id": "rollladenbadnord_2b78b",
+      "name": "Rollladen Bad Nord",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE78AF44#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE78AF44#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE78AF44#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE78AF44#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE78AF44#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE78AF44#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE78AF44#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE78AF44#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE78AF44#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE78AF44#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE78AF44#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rolladenbürosüd_58818": {
+      "id": "rolladenbürosüd_58818",
+      "name": "Rolladen Büro Süd",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE79307F#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE79307F#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE79307F#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE79307F#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE79307F#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rolladenkindsüd_c87a1": {
+      "id": "rolladenkindsüd_c87a1",
+      "name": "Rolladen kind Süd",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE7905A3#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE7905A3#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE7905A3#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE7905A3#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE7905A3#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE7905A3#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE7905A3#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE7905A3#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE7905A3#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE7905A3#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE7905A3#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenbalkonessecke_1646a": {
+      "id": "rollladenbalkonessecke_1646a",
+      "name": "Rollladen Balkon Essecke",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE78FFBD#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE78FFBD#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE78FFBD#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE78FFBD#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE78FFBD#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE78FFBD#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE78FFBD#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE78FFBD#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE78FFBD#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE78FFBD#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE78FFBD#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenbadwest_50a20": {
+      "id": "rollladenbadwest_50a20",
+      "name": "Rollladen Bad West",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE79880C#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE79880C#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE79880C#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE79880C#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE79880C#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE79880C#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE79880C#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE79880C#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE79880C#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE79880C#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE79880C#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenwc_9f37e": {
+      "id": "rollladenwc_9f37e",
+      "name": "Rollladen WC",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE6C0C77#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE6C0C77#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE6C0C77#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE6C0C77#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE6C0C77#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenfluroben_bfe58": {
+      "id": "rollladenfluroben_bfe58",
+      "name": "Rollladen Flur Oben",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE7895D7#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE7895D7#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE7895D7#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE7895D7#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE7895D7#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE7895D7#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE7895D7#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE7895D7#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE7895D7#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE7895D7#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE7895D7#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenschlafzimmer_f4f6c": {
+      "id": "rollladenschlafzimmer_f4f6c",
+      "name": "Rollladen Schlafzimmer ",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE787DB2#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE787DB2#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE787DB2#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE787DB2#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE787DB2#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenflurunten_73bff": {
+      "id": "rollladenflurunten_73bff",
+      "name": "Rollladen Flur unten",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE77D641#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE77D641#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE77D641#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE77D641#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE77D641#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenküche_aa6c9": {
+      "id": "rollladenküche_aa6c9",
+      "name": "Rollladen Küche",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE795B68#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE795B68#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE795B68#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE795B68#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE795B68#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladenbüroost_4f3be": {
+      "id": "rollladenbüroost_4f3be",
+      "name": "Rollladen Büro Ost",
+      "function": "blind",
+      "states": {
+        "level": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.Shutter.Position",
+          "action": "shelly.0.SHSW-25#C45BBE6C2104#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE6C2104#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE6C2104#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE6C2104#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE6C2104#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rollladen1kind_3f7d8": {
+      "id": "rollladen1kind_3f7d8",
+      "name": "Rollladen1 Kind ",
+      "function": "blind",
+      "states": {
+        "level": {
+          "action": "shelly.0.SHSW-25#C45BBE7997A9#1.Shutter.Position",
+          "actionElement": "InputAction"
+        },
+        "activity": {
+          "state": "shelly.0.SHSW-25#C45BBE7997A9#1.Shutter.state",
+          "actionElement": "DropdownAction",
+          "action": "shelly.0.SHSW-25#C45BBE7997A9#1.Shutter.state",
+          "display": {
+            "close": "close",
+            "open": "open",
+            "stop": "stop"
+          }
+        },
+        "stop": {
+          "action": "shelly.0.SHSW-25#C45BBE7997A9#1.Shutter.Pause",
+          "actionElement": "IconButtonAction"
+        },
+        "powerCounter": {
+          "state": "shelly.0.SHSW-25#C45BBE7997A9#1.Relay0.Energy",
+          "unit": " Wh"
+        },
+        "powerMeter": {
+          "state": "shelly.0.SHSW-25#C45BBE7997A9#1.Relay0.Power",
+          "unit": " W"
+        },
+        "firmware": {
+          "state": "shelly.0.SHSW-25#C45BBE7997A9#1.firmware",
+          "action": "shelly.0.SHSW-25#C45BBE7997A9#1.firmwareupdate",
+          "actionElement": "IconButtonAction"
+        },
+        "temperature": {
+          "state": "shelly.0.SHSW-25#C45BBE7997A9#1.temperatureC"
+        },
+        "version": {
+          "state": "shelly.0.SHSW-25#C45BBE7997A9#1.version"
+        },
+        "reachability": {
+          "state": "shelly.0.SHSW-25#C45BBE7997A9#1.online"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        }
+      }
+    },
+    "rolladenankleide_31a17": {
+      "name": "Rolladen Ankleide",
+      "icon": "",
+      "label": "",
+      "function": "blind",
+      "states": {
+        "Level": {
+          "_created": 1688539630674,
+          "stateKey": "Level",
+          "showState": false,
+          "state": "",
+          "_updated": 1688540153437,
+          "actionElement": "InputAction",
+          "label": "",
+          "unit": "%",
+          "action": "shelly.1.shellyplus2pm#441793ad9418#1.Cover0.Position",
+          "bodyElement": "LevelBody"
+        },
+        "Close": {
+          "stateKey": "Close",
+          "showState": true,
+          "action": "shelly.1.shellyplus2pm#441793ad9418#1.Cover0.Close",
+          "state": "shelly.1.shellyplus2pm#441793ad9418#1.Cover0.Close",
+          "actionElement": "IconButtonAction"
+        },
+        "power": {
+          "state": "shelly.1.shellyplus2pm#441793ad9418#1.Relay0.Switch",
+          "action": "shelly.1.shellyplus2pm#441793ad9418#1.Relay0.Switch",
+          "actionElement": "SwitchAction",
+          "stateKey": "power"
+        },
+        "powerCounter": {
+          "state": "shelly.1.shellyplus2pm#441793ad9418#1.Relay0.Energy",
+          "unit": " Wh",
+          "stateKey": "powerCounter"
+        },
+        "powerMeter": {
+          "state": "shelly.1.shellyplus2pm#441793ad9418#1.Relay0.Power",
+          "unit": " W",
+          "stateKey": "powerMeter"
+        },
+        "firmware": {
+          "state": "shelly.1.shellyplus2pm#441793ad9418#1.firmware",
+          "action": "shelly.1.shellyplus2pm#441793ad9418#1.firmwareupdate",
+          "actionElement": "IconButtonAction",
+          "stateKey": "firmware"
+        },
+        "version": {
+          "state": "shelly.1.shellyplus2pm#441793ad9418#1.version",
+          "stateKey": "version"
+        },
+        "reachability": {
+          "state": "shelly.1.shellyplus2pm#441793ad9418#1.online",
+          "stateKey": "reachability"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "_created": 1688539624624,
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        },
+        "_updated": 1688540100536
+      },
+      "id": "rolladenankleide_31a17",
+      "revision": "85c5a"
+    },
+    "balkonkueche_596de": {
+      "name": "BalkonKueche",
+      "icon": "",
+      "label": "",
+      "function": "blind",
+      "states": {
+        "Position": {
+          "_created": 1688539364813,
+          "stateKey": "Position",
+          "showState": false,
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.Cover0.Position",
+          "_updated": 1688539585258,
+          "actionElement": "InputAction",
+          "bodyElement": "LevelBody",
+          "unit": "%"
+        },
+        "activity": {
+          "stateKey": "activity",
+          "showState": true,
+          "state": "0_userdata.0.RollladenBalkonKueche.State",
+          "actionElement": "BlindLevelAction",
+          "BlindLevelActionConfig": {
+            "stopAction": "stop"
+          }
+        },
+        "Close": {
+          "stateKey": "Close",
+          "showState": false,
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.Cover0.Close",
+          "actionElement": "IconButtonAction",
+          "BlindLevelActionConfig": {
+            "activityState": "Open"
+          }
+        },
+        "Open": {
+          "stateKey": "Open",
+          "showState": false,
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.Cover0.Open",
+          "actionElement": "IconButtonAction"
+        },
+        "stop": {
+          "stateKey": "stop",
+          "showState": false,
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.Cover0.Stop",
+          "actionElement": "IconButtonAction"
+        },
+        "power": {
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.Relay0.Switch",
+          "action": "shelly.1.shellyplus2pm#b8d61a89db90#1.Relay0.Switch",
+          "actionElement": "SwitchAction",
+          "stateKey": "power"
+        },
+        "powerCounter": {
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.Relay0.Energy",
+          "unit": " Wh",
+          "stateKey": "powerCounter"
+        },
+        "powerMeter": {
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.Relay0.Power",
+          "unit": " W",
+          "stateKey": "powerMeter"
+        },
+        "firmware": {
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.firmware",
+          "action": "shelly.1.shellyplus2pm#b8d61a89db90#1.firmwareupdate",
+          "actionElement": "IconButtonAction",
+          "stateKey": "firmware"
+        },
+        "version": {
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.version",
+          "stateKey": "version"
+        },
+        "reachability": {
+          "state": "shelly.1.shellyplus2pm#b8d61a89db90#1.online",
+          "stateKey": "reachability"
+        }
+      },
+      "options": {},
+      "attributes": {
+        "_created": 1688539347679,
+        "imported": true,
+        "manufacturer": {
+          "name": "Shelly",
+          "namespace": "shelly"
+        },
+        "_updated": 1688539579884
+      },
+      "id": "balkonkueche_596de",
+      "revision": "1f200"
+    },
+    "d805b1e8-c6f5-4a32-aa07-5e801ad17fd7": {
+      "name": "Heizen",
+      "icon": "heating",
+      "label": "Heizung.Heizen",
+      "function": "heating",
+      "states": {
+        "Heizkurve": {
+          "_created": 1702560794242,
+          "stateKey": "Heizkurve",
+          "showState": true,
+          "label": "Heizkurve",
+          "_updated": 1703070757661,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Heizkurve",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "0.20",
+            "max": "0.50"
+          },
+          "LevelBodyConfig": {
+            "step": "0.01",
+            "markStep": "30"
+          }
+        },
+        "Raumeinfluss": {
+          "_created": 1700052588607,
+          "stateKey": "Raumeinfluss",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Raumeinfluss",
+          "_updated": 1703236448275,
+          "unit": "%",
+          "label": "Raumeinfluss",
+          "actionElement": null,
+          "DropdownActionConfig": {},
+          "display": "",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 0,
+            "max": 100
+          }
+        },
+        "SG-Raumtemperatur": {
+          "_created": 1697027086730,
+          "stateKey": "SG-Raumtemperatur",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.SG_Komfort",
+          "_updated": 1718195532958,
+          "unit": "°C",
+          "label": "SG-Ready Raumtemperatur",
+          "actionElement": null,
+          "properties": {
+            "min": 20,
+            "max": 25
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "ECO Temperatur": {
+          "_created": 1697025364064,
+          "stateKey": "ECO Temperatur",
+          "showState": true,
+          "label": "ECO Temperatur",
+          "_updated": 1703079997762,
+          "unit": "°C",
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.ECO_Temp",
+          "actionElement": null,
+          "properties": {
+            "min": 15,
+            "max": 25
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "Komforttemperatur": {
+          "_created": 1697020893132,
+          "stateKey": "Komforttemperatur",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Raumtemp",
+          "_updated": 1703080025373,
+          "actionElement": null,
+          "properties": {
+            "min": 15,
+            "max": 25
+          },
+          "display": "",
+          "unit": "°C",
+          "label": "Komforttemperatur",
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "SG Ready Aktiv": {
+          "_created": 1684822243681,
+          "stateKey": "SG Ready Aktiv",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.SG_Ready_Aktiv",
+          "_updated": 1684822418728,
+          "state": "0_userdata.0.Heizung.Steuerung.SG_Ready_Aktiv",
+          "label": "SG Ready Aktiv",
+          "actionElement": "SwitchAction"
+        },
+        "NT Hochheizen": {
+          "_created": 1765977842323,
+          "stateKey": "NT Hochheizen",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.NT_Hochheizen",
+          "_updated": 1765977842323,
+          "label": "NT Hochheizen",
+          "actionElement": "SwitchAction",
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.Heizzeiten.NT_Hochheizen"
+        },
+        "NT Raumtemperatur Extra": {
+          "_created": 1765977956926,
+          "stateKey": "NT Raumtemperatur Extra",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.NT_Raumtemperatur_Extra",
+          "_updated": 1765977956926,
+          "label": "NT Raumtemperatur Extra",
+          "unit": "°C",
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.NT_Raumtemperatur_Extra",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 0,
+            "max": 5
+          },
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "10"
+          }
+        }
+      },
+      "options": {},
+      "attributes": {},
+      "id": "d805b1e8-c6f5-4a32-aa07-5e801ad17fd7",
+      "revision": "1"
+    },
+    "ea589e22-cd0d-4337-81f3-c4fe1342ea03": {
+      "name": "Warmwasser",
+      "icon": "",
+      "label": "Heizung.Warmwasser",
+      "function": "heating",
+      "states": {
+        "Sonntag Badetag": {
+          "_created": 1732004295249,
+          "stateKey": "Sonntag Badetag",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Sonntag_Badetag_",
+          "_updated": 1732004318614,
+          "label": "Sonntag Badetag?",
+          "actionElement": "SwitchAction"
+        },
+        "Warmwasser bis": {
+          "_created": 1721397680506,
+          "stateKey": "Warmwasser bis",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Warmwasser_bis_HH",
+          "_updated": 1732000252823,
+          "actionElement": "TimePickerAction",
+          "_copied": 1732000216061,
+          "label": "Warmwasser bis"
+        },
+        "Warmwasser von": {
+          "_created": 1721397629350,
+          "stateKey": "Warmwasser von",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Warmwasser_von_HH",
+          "_updated": 1732000281508,
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {},
+          "_copied": 1732000201682,
+          "label": "Warmwasser von"
+        },
+        "PV Prio": {
+          "_created": 1721647722656,
+          "stateKey": "PV Prio",
+          "showState": true,
+          "label": "PV Prio",
+          "_updated": 1721647965285,
+          "state": "0_userdata.0.PV.Uberschuss_config.PV_Prio",
+          "display": {
+            "Auto": "Auto laden",
+            "Warmwasser": "Warmwasser"
+          },
+          "actionElement": "DropdownAction"
+        },
+        "Legionellenprogramm": {
+          "_created": 1688647113111,
+          "stateKey": "Legionellenprogramm",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Legionellenprogramm",
+          "_updated": 1688647148018,
+          "label": "Legionellenprogramm",
+          "actionElement": "SwitchAction"
+        },
+        "Warmwasser ECO": {
+          "_created": 1699517712594,
+          "stateKey": "Warmwasser ECO",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.WW_ECO",
+          "_updated": 1703079715188,
+          "label": "Warmwasser ECO",
+          "unit": "°C",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 20,
+            "max": 55
+          },
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "Warmwasser Komfort": {
+          "_created": 1699517706896,
+          "stateKey": "Warmwasser Komfort",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.WW_Komfort",
+          "_updated": 1753694944976,
+          "unit": "°C",
+          "actionElement": null,
+          "label": "Warmwasser Komfort",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 40,
+            "max": 60
+          },
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "20"
+          }
+        },
+        "SG-Warmwasser": {
+          "_created": 1697027072537,
+          "stateKey": "SG-Warmwasser",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Heizen.SG_WW",
+          "_updated": 1703079934752,
+          "unit": "°C",
+          "label": "SG-Ready Warmwassertemperatur",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": 50,
+            "max": 65
+          },
+          "LevelBodyConfig": {
+            "step": "0.5",
+            "markStep": "15"
+          }
+        }
+      },
+      "options": {},
+      "attributes": {},
+      "id": "ea589e22-cd0d-4337-81f3-c4fe1342ea03",
+      "revision": "1"
+    },
+    "16b986b5-58e8-4da6-abfb-b70c5f7f0933": {
+      "name": "Kühlen",
+      "icon": "air-conditioner",
+      "label": "Heizung.Kuehlen",
+      "function": "heating",
+      "states": {
+        "Kühlen Automatik": {
+          "_created": 1687248835601,
+          "stateKey": "Kühlen Automatik",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlen_automatik",
+          "_updated": 1687248871613,
+          "label": "Kühlen Automatik",
+          "actionElement": "SwitchAction"
+        },
+        "Kühlen bis": {
+          "_created": 1721397719851,
+          "stateKey": "Kühlen bis",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlen_bis_HH",
+          "_updated": 1721397729478,
+          "actionElement": "TimePickerAction"
+        },
+        "Kühlen von": {
+          "_created": 1721397702392,
+          "stateKey": "Kühlen von",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlen_von_HH",
+          "_updated": 1721397713995,
+          "actionElement": "TimePickerAction"
+        },
+        "Kühlleistung": {
+          "_created": 1692595769577,
+          "stateKey": "Kühlleistung",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Kühlleistung",
+          "_updated": 1694437906075,
+          "label": "Kühlleistung",
+          "unit": "KW",
+          "actionElement": "DropdownAction",
+          "DropdownActionConfig": {},
+          "display": {
+            "4,0": "4,0",
+            "5,0": "5,0",
+            "6,0": "6,0",
+            "7,0": "7,0",
+            "8,0": "8,0"
+          }
+        },
+        "Timeout": {
+          "_created": 1689112166790,
+          "stateKey": "Timeout",
+          "showState": true,
+          "action": "",
+          "_updated": 1689112203700,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Timeout"
+        },
+        "Taupunkt Hysterese": {
+          "_created": 1689111840668,
+          "stateKey": "Taupunkt Hysterese",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Taupunkt_hysterese",
+          "_updated": 1689112433618,
+          "unit": "K",
+          "label": "Taupunkt Hysterese",
+          "actionElement": "DropdownAction",
+          "DropdownActionConfig": {},
+          "display": {
+            "1": "1",
+            "0.5": "0.5",
+            "0.6": "0.6",
+            "0.7": "0.7",
+            "0.8": "0.8",
+            "0.9": "0.9",
+            "1.5": "1.5"
+          }
+        },
+        "Timeout Trigger": {
+          "_created": 1689109609286,
+          "stateKey": "Timeout Trigger",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Trigger",
+          "_updated": 1689111604267,
+          "label": "Timeout Trigger",
+          "actionElement": "SwitchAction",
+          "SwitchActionConfig": {
+            "ack": true
+          }
+        },
+        "Kühlkurve": {
+          "_created": 1686723944696,
+          "stateKey": "Kühlkurve",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Steigerung_Kühlkurve",
+          "_updated": 1686724062674,
+          "label": "Kühlkurve",
+          "actionElement": "InputAction",
+          "InputActionConfig": {
+            "val": "val"
+          }
+        },
+        "Kühlen Aktiv": {
+          "_created": 1686564106436,
+          "stateKey": "Kühlen Aktiv",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Kuehlen_Aktiv",
+          "_updated": 1686564352451,
+          "label": "Kühlen Aktiv",
+          "actionElement": "SwitchAction"
+        },
+        "Kühlen Akku-Limit": {
+          "_created": 1718614153027,
+          "stateKey": "Kühlen Akku-Limit",
+          "showState": true,
+          "label": "Kühlen Akku-Limit",
+          "_updated": 1718614186015,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Akku_SOC_limit",
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Akku_SOC_limit",
+          "unit": "%",
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {}
+        },
+        "Außentemp_Vorhersage": {
+          "_created": 1691746164222,
+          "stateKey": "Außentemp_Vorhersage",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.Außentemp_Vorhersage",
+          "_updated": 1718616581073,
+          "label": "Außentemperatur Vorhersage Limit",
+          "unit": "°C",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "18",
+            "max": "28"
+          },
+          "LevelBodyConfig": {
+            "step": "0.5"
+          }
+        },
+        "Raum Start Temp": {
+          "_created": 1686564148743,
+          "stateKey": "Raum Start Temp",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Kühlen.StartTemp",
+          "_updated": 1718616671710,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.StartTemp",
+          "label": "Raum Start Temp",
+          "unit": "°C",
+          "actionElement": null,
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "15",
+            "max": "25"
+          }
+        },
+        "Raum Soll Temp": {
+          "_created": 1686564139469,
+          "stateKey": "Raum Soll Temp",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.RaumSoll",
+          "_updated": 1718616654630,
+          "label": "Raum Soll Temp",
+          "unit": "°C",
+          "actionElement": null,
+          "properties": {
+            "min": "18",
+            "max": "24"
+          },
+          "bodyElement": "LevelBody"
+        },
+        "Außentemp Grenze Kühlen": {
+          "_created": 1686564127589,
+          "stateKey": "Außentemp Grenze Kühlen",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Kühlen.Außentemp_Grenze",
+          "_updated": 1718616624911,
+          "label": "Außentemperatur Grenze",
+          "unit": "°C",
+          "actionElement": null,
+          "properties": {
+            "min": "15",
+            "max": "25"
+          },
+          "bodyElement": "LevelBody"
+        }
+      },
+      "options": {},
+      "attributes": {},
+      "id": "16b986b5-58e8-4da6-abfb-b70c5f7f0933",
+      "revision": "1"
+    },
+    "b31cd3c8-1733-4b85-9b80-1ff26b1833ab": {
+      "name": "Heizung Sonstiges",
+      "icon": "heating",
+      "label": "Heizung.Sonstiges",
+      "function": "heating",
+      "states": {
+        "Heizen bis": {
+          "_created": 1721397680506,
+          "stateKey": "Heizen bis",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizen_bis_HH",
+          "_updated": 1721397694665,
+          "actionElement": "TimePickerAction"
+        },
+        "Heizen von": {
+          "_created": 1721397629350,
+          "stateKey": "Heizen von",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizen_von_HH",
+          "_updated": 1721397669191,
+          "actionElement": "TimePickerAction",
+          "TimePickerActionConfig": {}
+        },
+        "Heizprogramm": {
+          "_created": 1709042082524,
+          "stateKey": "Heizprogramm",
+          "showState": true,
+          "state": "0_userdata.0.Heizung.Steuerung.Heizen.Heizprogramm",
+          "_updated": 1709042276447,
+          "actionElement": "DropdownAction",
+          "DropdownActionConfig": {},
+          "display": {
+            "24hHeizen": "24hHeizen",
+            "Nachtabsenkung": "Nachtabsenkung"
+          },
+          "label": "Heizprogramm"
+        },
+        "SG-Ready DischargeLimit": {
+          "_created": 1708600829059,
+          "stateKey": "SG-Ready DischargeLimit",
+          "showState": true,
+          "label": "SG-Ready DischargeLimit",
+          "_updated": 1708600905574,
+          "unit": "Wh",
+          "action": "0_userdata.0.PV.SG_Ready_Discharge_Threshold",
+          "state": "0_userdata.0.PV.SG_Ready_Discharge_Threshold",
+          "bodyElement": "LevelBody",
+          "properties": {
+            "min": "-2000",
+            "max": "0"
+          },
+          "LevelBodyConfig": {}
+        },
+        "10min Überschuss avg": {
+          "_created": 1703069940810,
+          "stateKey": "10min Überschuss avg",
+          "showState": true,
+          "action": "",
+          "_updated": 1703069988134,
+          "unit": "Wh",
+          "state": "0_userdata.0.PV.Avg10min",
+          "label": "10min Überschuss Avg"
+        },
+        "SG-Ready PV-Limit": {
+          "_created": 1703069869545,
+          "stateKey": "SG-Ready PV-Limit",
+          "showState": true,
+          "label": "SG-Ready PV-Limit",
+          "_updated": 1703070379142,
+          "action": "0_userdata.0.PV.SG_Ready_limit",
+          "unit": "Wh",
+          "actionElement": null,
+          "InputActionConfig": {},
+          "properties": {
+            "min": "1500",
+            "max": "3500"
+          },
+          "bodyElement": "LevelBody",
+          "LevelBodyConfig": {
+            "step": "100",
+            "markStep": "20"
+          }
+        },
+        "Server Response": {
+          "_created": 1697097222233,
+          "stateKey": "Server Response",
+          "showState": true,
+          "action": "0_userdata.0.Heizung.Steuerung.Last_Response",
+          "_updated": 1697097229748,
+          "label": "Server Response"
+        },
+        "SG Ready Start-Time": {
+          "_created": 1686573132425,
+          "stateKey": "SG Ready Start-Time",
+          "showState": true,
+          "label": "SG Ready Start-Time",
+          "_updated": 1686573152164,
+          "state": "0_userdata.0.Heizung.Steuerung.SG_Ready_Start_time",
+          "actionElement": "TimePickerAction"
+        }
+      },
+      "options": {},
+      "attributes": {},
+      "id": "b31cd3c8-1733-4b85-9b80-1ff26b1833ab",
+      "revision": "1"
+    }
+  }
+}

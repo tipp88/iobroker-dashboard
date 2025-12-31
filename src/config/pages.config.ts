@@ -1,4 +1,4 @@
-import pagesData from '../../../ToAdd/todo.json';
+import pagesData from '../../data/todo.json';
 import type { PageConfig, ControlPanelConfig, StateConfig } from '../types/controls';
 
 // Transform state from JSON format to our StateConfig format

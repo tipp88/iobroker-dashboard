@@ -1,4 +1,4 @@
-import pagesData from '../../../ToAdd/todo.json';
+import pagesData from '../../data/todo.json';
 
 // Export existing control panels from todo.json
 export const EXISTING_CONTROL_PANELS = (pagesData.controlPanels || {}) as Record<string, any>;
