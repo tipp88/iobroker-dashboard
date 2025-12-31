@@ -107,4 +107,6 @@ echo "Starte Deployment-Skript..."
 echo "=========================================="
 echo ""
 
-exec ./deploy-lxc.sh
+# Führe deploy-lxc.sh mit stdin vom Terminal aus
+# Dies ermöglicht interaktive Eingaben auch wenn bootstrap via curl | bash läuft
+exec ./deploy-lxc.sh </dev/tty

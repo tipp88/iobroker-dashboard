@@ -11,7 +11,7 @@ Dieses Dokument beschreibt die Installation des IobrokerDashboards auf einem Deb
 
 ## Schnellinstallation (Empfohlen)
 
-### Ein-Befehl-Installation
+### Methode 1: Ein-Befehl-Installation (Empfohlen)
 
 Die einfachste Methode - funktioniert auch auf komplett frischen LXC Containern:
 
@@ -22,7 +22,17 @@ curl -fsSL https://raw.githubusercontent.com/tipp88/iobroker-dashboard/main/boot
 
 **Das war's!** Das Skript installiert automatisch alle Voraussetzungen und startet das Deployment.
 
-### Alternative: Manuelle Schritte
+### Methode 2: Download und Ausführung
+
+Falls die Ein-Befehl-Installation Probleme macht (z.B. bei interaktiven Eingaben):
+
+```bash
+# Als root auf dem LXC Container
+curl -fsSL https://raw.githubusercontent.com/tipp88/iobroker-dashboard/main/bootstrap.sh -o /tmp/bootstrap.sh
+bash /tmp/bootstrap.sh
+```
+
+### Methode 3: Manuelle Schritte
 
 Falls Sie die Schritte einzeln ausführen möchten:
 
