@@ -11,34 +11,44 @@ Dieses Dokument beschreibt die Installation des IobrokerDashboards auf einem Deb
 
 ## Schnellinstallation (Empfohlen)
 
-### 1. Repository auf LXC klonen
+### Ein-Befehl-Installation
+
+Die einfachste Methode - funktioniert auch auf komplett frischen LXC Containern:
 
 ```bash
 # Als root auf dem LXC Container
+curl -fsSL https://raw.githubusercontent.com/tipp88/iobroker-dashboard/main/bootstrap.sh | bash
+```
+
+**Das war's!** Das Skript installiert automatisch alle Voraussetzungen und startet das Deployment.
+
+### Alternative: Manuelle Schritte
+
+Falls Sie die Schritte einzeln ausführen möchten:
+
+```bash
+# Als root auf dem LXC Container
+apt update
+apt install -y git curl
+mkdir -p /var/www
 cd /var/www
 git clone https://github.com/tipp88/iobroker-dashboard.git
 cd iobroker-dashboard
-```
-
-### 2. Deployment-Skript ausführen
-
-```bash
 chmod +x deploy-lxc.sh
 ./deploy-lxc.sh
 ```
 
-Das Skript wird Sie durch folgende Schritte führen:
+Das Deployment-Skript führt Sie durch folgende Schritte:
 1. System-Updates installieren
 2. Node.js 20.x installieren
 3. nginx installieren
-4. Repository klonen
-5. Umgebungsvariablen konfigurieren (interaktiv)
-6. Dependencies installieren
-7. Production Build erstellen
-8. nginx konfigurieren
-9. nginx starten
+4. Umgebungsvariablen konfigurieren (interaktiv)
+5. Dependencies installieren
+6. Production Build erstellen
+7. nginx konfigurieren
+8. nginx starten
 
-### 3. Zugriff testen
+### Zugriff testen
 
 Nach erfolgreicher Installation ist das Dashboard erreichbar unter:
 ```
