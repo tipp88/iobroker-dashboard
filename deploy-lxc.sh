@@ -73,27 +73,35 @@ else
     print_status "Git bereits installiert"
 fi
 
-# Schritt 5: Repository klonen
+# Schritt 5: Repository vorbereiten
 echo ""
-echo "Schritt 5: Repository klonen..."
+echo "Schritt 5: Repository vorbereiten..."
 INSTALL_DIR="/var/www/iobroker-dashboard"
 
-if [ -d "$INSTALL_DIR" ]; then
-    print_warning "Verzeichnis $INSTALL_DIR existiert bereits"
-    read -p "Möchten Sie es löschen und neu klonen? (y/n): " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        rm -rf "$INSTALL_DIR"
-        print_status "Altes Verzeichnis gelöscht"
-    else
-        print_error "Deployment abgebrochen"
-        exit 1
+# Wenn das Skript nicht aus dem Zielverzeichnis läuft, klone es
+if [ "$PWD" != "$INSTALL_DIR" ]; then
+    if [ -d "$INSTALL_DIR" ]; then
+        print_warning "Verzeichnis $INSTALL_DIR existiert bereits"
+        read -p "Möchten Sie es löschen und neu klonen? (y/n): " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            # Sicherstellen, dass wir nicht im zu löschenden Verzeichnis sind
+            cd /tmp
+            rm -rf "$INSTALL_DIR"
+            print_status "Altes Verzeichnis gelöscht"
+        else
+            print_error "Deployment abgebrochen"
+            exit 1
+        fi
     fi
-fi
 
-git clone https://github.com/tipp88/iobroker-dashboard.git "$INSTALL_DIR"
-cd "$INSTALL_DIR"
-print_status "Repository geklont nach $INSTALL_DIR"
+    git clone https://github.com/tipp88/iobroker-dashboard.git "$INSTALL_DIR"
+    cd "$INSTALL_DIR"
+    print_status "Repository geklont nach $INSTALL_DIR"
+else
+    # Skript läuft bereits im Zielverzeichnis (via bootstrap.sh)
+    print_status "Repository bereits vorhanden"
+fi
 
 # Schritt 6: Umgebungsvariablen konfigurieren
 echo ""
