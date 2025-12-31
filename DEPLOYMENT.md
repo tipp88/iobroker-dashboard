@@ -210,6 +210,17 @@ certbot --nginx -d ihre-domain.de
 
 ## Troubleshooting
 
+### Git-Fehler: "Password authentication is not supported"
+
+**Problem:** Das Repository ist noch privat auf GitHub.
+
+**Lösung:**
+1. Öffnen Sie: https://github.com/tipp88/iobroker-dashboard
+2. Gehe zu **Settings** → **Danger Zone**
+3. Klicke auf **Change visibility** → **Make public**
+4. Bestätige mit dem Repository-Namen
+5. Führe das Bootstrap-Skript erneut aus
+
 ### Dashboard zeigt keine Daten
 
 1. Überprüfen Sie die `.env.local` Datei

@@ -78,9 +78,21 @@ if [ -d "iobroker-dashboard" ]; then
     fi
 fi
 
-git clone https://github.com/tipp88/iobroker-dashboard.git
+# Versuche zuerst HTTPS (für öffentliche Repos)
+if git clone https://github.com/tipp88/iobroker-dashboard.git 2>/dev/null; then
+    print_status "Repository geklont (HTTPS)"
+else
+    print_warning "HTTPS-Klonen fehlgeschlagen. Repository ist vermutlich privat."
+    echo ""
+    echo "Bitte machen Sie das Repository public auf GitHub:"
+    echo "  1. Öffnen Sie: https://github.com/tipp88/iobroker-dashboard"
+    echo "  2. Settings → Danger Zone → Change visibility → Make public"
+    echo ""
+    print_error "Installation abgebrochen"
+    exit 1
+fi
+
 cd iobroker-dashboard
-print_status "Repository geklont"
 
 # Schritt 4: Deployment-Skript ausführbar machen
 echo ""
