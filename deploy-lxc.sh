@@ -111,10 +111,36 @@ echo ""
 print_warning "Bitte geben Sie Ihre Konfigurationswerte ein:"
 echo ""
 
-read -p "ioBroker API URL (z.B. http://192.168.1.100:8087): " IOBROKER_URL
-read -p "Grafana URL (z.B. http://192.168.1.100:3000): " GRAFANA_URL
-read -p "Polling Interval in ms [5000]: " POLLING_INTERVAL
-POLLING_INTERVAL=${POLLING_INTERVAL:-5000}
+# ioBroker URL mit Validierung
+while true; do
+    read -p "ioBroker API URL (z.B. http://192.168.1.100:8087): " IOBROKER_URL
+    if [[ "$IOBROKER_URL" =~ ^https?:// ]]; then
+        break
+    else
+        print_error "Ungültige URL. Muss mit http:// oder https:// beginnen."
+    fi
+done
+
+# Grafana URL mit Validierung
+while true; do
+    read -p "Grafana URL (z.B. http://192.168.1.100:3000): " GRAFANA_URL
+    if [[ "$GRAFANA_URL" =~ ^https?:// ]]; then
+        break
+    else
+        print_error "Ungültige URL. Muss mit http:// oder https:// beginnen."
+    fi
+done
+
+# Polling Interval mit Validierung
+while true; do
+    read -p "Polling Interval in ms [5000]: " POLLING_INTERVAL
+    POLLING_INTERVAL=${POLLING_INTERVAL:-5000}
+    if [[ "$POLLING_INTERVAL" =~ ^[0-9]+$ ]] && [ "$POLLING_INTERVAL" -ge 100 ]; then
+        break
+    else
+        print_error "Ungültiges Interval: '$POLLING_INTERVAL'. Bitte eine Zahl >= 100 eingeben."
+    fi
+done
 
 cat > .env.local << EOF
 VITE_IOBROKER_API_URL=$IOBROKER_URL
@@ -140,9 +166,18 @@ print_status "Build erfolgreich erstellt"
 echo ""
 echo "Schritt 9: nginx konfigurieren..."
 
-# Port abfragen
-read -p "Port für Dashboard [80]: " DASHBOARD_PORT
-DASHBOARD_PORT=${DASHBOARD_PORT:-80}
+# Port abfragen mit Validierung
+while true; do
+    read -p "Port für Dashboard [80]: " DASHBOARD_PORT
+    DASHBOARD_PORT=${DASHBOARD_PORT:-80}
+
+    # Validiere dass es eine Zahl zwischen 1 und 65535 ist
+    if [[ "$DASHBOARD_PORT" =~ ^[0-9]+$ ]] && [ "$DASHBOARD_PORT" -ge 1 ] && [ "$DASHBOARD_PORT" -le 65535 ]; then
+        break
+    else
+        print_error "Ungültiger Port: '$DASHBOARD_PORT'. Bitte eine Zahl zwischen 1 und 65535 eingeben."
+    fi
+done
 
 cat > /etc/nginx/sites-available/iobroker-dashboard << EOF
 server {
