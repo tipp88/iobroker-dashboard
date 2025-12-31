@@ -1,0 +1,15 @@
+[Unit]
+Description=ioBroker Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=claude
+WorkingDirectory=/home/claude/Desktop/ClaudeCode_test/iobroker-dashboard
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
