@@ -110,6 +110,28 @@ class ConfigApi {
       }
     }
 
+    // Validate userLinks structure
+    if (config.userLinks) {
+      if (!Array.isArray(config.userLinks)) {
+        errors.push('Invalid userLinks structure - expected array');
+      } else {
+        config.userLinks.forEach((link: any, index: number) => {
+          if (typeof link.id !== 'string' || link.id.trim() === '') {
+            errors.push(`Invalid userLinks[${index}].id - expected non-empty string`);
+          }
+          if (typeof link.name !== 'string' || link.name.trim() === '') {
+            errors.push(`Invalid userLinks[${index}].name - expected non-empty string`);
+          }
+          if (typeof link.url !== 'string' || link.url.trim() === '') {
+            errors.push(`Invalid userLinks[${index}].url - expected non-empty string`);
+          }
+          if (typeof link.iconKey !== 'string' || link.iconKey.trim() === '') {
+            errors.push(`Invalid userLinks[${index}].iconKey - expected non-empty string`);
+          }
+        });
+      }
+    }
+
     return {
       isValid: errors.length === 0,
       errors,

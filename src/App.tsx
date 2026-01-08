@@ -12,6 +12,7 @@ import { Autos } from './views/Autos';
 import { Dreame } from './views/Dreame';
 import { Wallbox } from './views/Wallbox';
 import { Rollaeden } from './views/Rollaeden';
+import { Links } from './views/Links';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 
 const queryClient = new QueryClient({
@@ -32,6 +33,7 @@ function App() {
           <MainLayout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/links" element={<Links />} />
               <Route path="/solar" element={<Solar />} />
               <Route path="/evcc" element={<EVCC />} />
               <Route path="/heizung" element={<Heizung />} />

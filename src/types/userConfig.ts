@@ -1,4 +1,5 @@
 import type { ClimateDevice, SensorDevice, SwitchDevice, ShutterDevice } from './devices';
+import type { LinkConfig } from './links';
 
 export interface UserDevicesConfig {
   climate: ClimateDevice[];
@@ -47,6 +48,7 @@ export interface TodoJsonStructure {
   controlPanels: Record<string, any>;
   userDevices?: UserDevicesConfig;
   userControlPanels?: Record<string, UserControlPanelConfig>;
+  userLinks?: LinkConfig[];
 }
 
 export interface DeviceValidationResult {

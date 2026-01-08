@@ -6,6 +6,7 @@ import type { ColorSchemeName } from '../../contexts/ColorSchemeContext';
 import { cn } from '../../utils/cn';
 import { ControlPanelsTab } from '../settings/ControlPanelsTab';
 import { ImportExportTab } from '../settings/ImportExportTab';
+import { LinksSection } from '../settings/LinksSection';
 
 interface SettingsModalProps {
   isOpen: boolean;
@@ -182,6 +183,11 @@ export const SettingsModal = ({ isOpen, onClose }: SettingsModalProps) => {
                   ))}
                 </div>
               </div>
+
+              {/* Divider */}
+              <div className="border-t border-stroke-subtle"></div>
+
+              <LinksSection />
             </>
           )}
 

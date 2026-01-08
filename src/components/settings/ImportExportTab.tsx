@@ -7,7 +7,7 @@ import { cn } from '../../utils/cn';
 type ImportMode = 'merge' | 'replace';
 
 export const ImportExportTab = () => {
-  const { exportConfig, importConfig, userDevices, userControlPanels } = useUserConfigStore();
+  const { exportConfig, importConfig, userDevices, userControlPanels, userLinks } = useUserConfigStore();
   const { importFromFile, importFromText, isImporting, importError, clearError } = useDeviceImport();
 
   const [exportPreview, setExportPreview] = useState('');
@@ -24,6 +24,7 @@ export const ImportExportTab = () => {
     userDevices.switches.length +
     userDevices.shutters.length;
   const totalPanels = Object.keys(userControlPanels).length;
+  const totalLinks = userLinks.length;
 
   const handleExportDevices = () => {
     const config = { userDevices };
@@ -87,9 +88,17 @@ export const ImportExportTab = () => {
         ...(config.userControlPanels || {}),
       };
 
+      const mergedLinks = [...userLinks];
+      (config.userLinks || []).forEach((link) => {
+        if (!mergedLinks.some((existing) => existing.id === link.id)) {
+          mergedLinks.push(link);
+        }
+      });
+
       importConfig({
         userDevices: mergedDevices,
         userControlPanels: mergedPanels,
+        userLinks: mergedLinks,
       });
     }
 
@@ -150,10 +159,10 @@ export const ImportExportTab = () => {
 
           <button
             onClick={handleExportAll}
-            disabled={totalDevices === 0 && totalPanels === 0}
+            disabled={totalDevices === 0 && totalPanels === 0 && totalLinks === 0}
             className={cn(
               'px-4 py-3 rounded-lg font-medium transition-colors flex flex-col items-center gap-2',
-              totalDevices === 0 && totalPanels === 0
+              totalDevices === 0 && totalPanels === 0 && totalLinks === 0
                 ? 'bg-neutral-surface2 text-text-secondary cursor-not-allowed'
                 : 'bg-cyan-500 text-white hover:bg-cyan-600'
             )}
@@ -167,7 +176,7 @@ export const ImportExportTab = () => {
               />
             </svg>
             <span>Export All</span>
-            <span className="text-xs opacity-80">({totalDevices + totalPanels} items)</span>
+            <span className="text-xs opacity-80">({totalDevices + totalPanels + totalLinks} items)</span>
           </button>
         </div>
 
@@ -232,7 +241,7 @@ export const ImportExportTab = () => {
               setImportText(e.target.value);
               clearError();
             }}
-            placeholder='{"userDevices": {...}, "userControlPanels": {...}}'
+            placeholder='{"userDevices": {...}, "userControlPanels": {...}, "userLinks": [...]}'
             rows={8}
             className="w-full px-3 py-2 bg-neutral-surface2 border border-stroke-default rounded-lg text-text-primary text-sm font-mono resize-none focus:outline-none focus:ring-2 focus:ring-cyan-500/50 transition-all"
           />
