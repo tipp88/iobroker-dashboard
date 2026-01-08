@@ -1,5 +1,7 @@
 node_modules
 dist
+.github
+.claude
 .git
 .gitignore
 *.log

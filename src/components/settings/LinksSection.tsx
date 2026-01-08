@@ -1,9 +1,10 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Icon from '@mdi/react';
 import { useUserConfigStore } from '../../store/userConfigStore';
 import { LINK_ICON_OPTIONS, LINK_ICON_MAP } from '../../config/links.config';
 import type { LinkIconKey } from '../../types/links';
 import { generateUUID } from '../../utils/uuid';
+import { configApi } from '../../api/configApi';
 
 const normalizeUrl = (value: string) => {
   const trimmed = value.trim();
@@ -52,6 +53,8 @@ export const LinksSection = () => {
   const [newName, setNewName] = useState('');
   const [newUrl, setNewUrl] = useState('');
   const [newIconKey, setNewIconKey] = useState<LinkIconKey>('link');
+  const hasSyncedRef = useRef(false);
+  const saveTimeoutRef = useRef<number | null>(null);
 
   const iconOptions = useMemo(() => LINK_ICON_OPTIONS, []);
 
@@ -74,6 +77,27 @@ export const LinksSection = () => {
     setNewUrl('');
     setNewIconKey('link');
   };
+
+  useEffect(() => {
+    if (!hasSyncedRef.current) {
+      hasSyncedRef.current = true;
+      return;
+    }
+
+    if (saveTimeoutRef.current) {
+      window.clearTimeout(saveTimeoutRef.current);
+    }
+
+    saveTimeoutRef.current = window.setTimeout(() => {
+      configApi.saveLinks(userLinks);
+    }, 600);
+
+    return () => {
+      if (saveTimeoutRef.current) {
+        window.clearTimeout(saveTimeoutRef.current);
+      }
+    };
+  }, [userLinks]);
 
   return (
     <div className="space-y-4">

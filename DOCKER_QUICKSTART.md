@@ -10,6 +10,7 @@ docker pull ghcr.io/tipp88/iobroker-dashboard:latest
 docker run -d \
   --name iobroker-dashboard \
   -p 8080:80 \
+  -v /path/on/host/iobroker-dashboard-data:/data \
   --restart unless-stopped \
   ghcr.io/tipp88/iobroker-dashboard:latest
 ```
@@ -25,6 +26,7 @@ docker rm iobroker-dashboard
 docker run -d \
   --name iobroker-dashboard \
   -p 8080:80 \
+  -v /path/on/host/iobroker-dashboard-data:/data \
   --restart unless-stopped \
   ghcr.io/tipp88/iobroker-dashboard:latest
 ```
@@ -34,6 +36,7 @@ docker run -d \
 docker run -d \
   --name iobroker-dashboard \
   -p 80:80 \
+  -v /path/on/host/iobroker-dashboard-data:/data \
   --restart unless-stopped \
   ghcr.io/tipp88/iobroker-dashboard:latest
 ```

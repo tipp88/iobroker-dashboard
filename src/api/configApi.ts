@@ -137,6 +137,37 @@ class ConfigApi {
       errors,
     };
   }
+
+  /**
+   * Load shared links configuration
+   */
+  async loadLinks(): Promise<any[] | null> {
+    try {
+      const response = await fetch('/config/links.json');
+      if (!response.ok) {
+        return null;
+      }
+      return response.json();
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Save shared links configuration
+   */
+  async saveLinks(links: any[]): Promise<boolean> {
+    try {
+      const response = await fetch('/config/links.json', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(links),
+      });
+      return response.ok;
+    } catch {
+      return false;
+    }
+  }
 }
 
 export const configApi = new ConfigApi();

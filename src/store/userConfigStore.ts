@@ -43,6 +43,7 @@ interface UserConfigState {
   addLink: (link: LinkConfig) => void;
   updateLink: (id: string, updates: Partial<LinkConfig>) => void;
   removeLink: (id: string) => void;
+  replaceLinks: (links: LinkConfig[]) => void;
 
   // Import/Export
   exportConfig: () => Partial<TodoJsonStructure>;
@@ -178,6 +179,11 @@ export const useUserConfigStore = create<UserConfigState>()(
       removeLink: (id) =>
         set((state) => ({
           userLinks: state.userLinks.filter((link) => link.id !== id),
+        })),
+
+      replaceLinks: (links) =>
+        set(() => ({
+          userLinks: links,
         })),
 
       exportConfig: () => {

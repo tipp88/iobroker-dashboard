@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { useEffect, useRef } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MainLayout } from './components/layout/MainLayout';
 import { Home } from './views/Home';
@@ -14,6 +15,8 @@ import { Wallbox } from './views/Wallbox';
 import { Rollaeden } from './views/Rollaeden';
 import { Links } from './views/Links';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
+import { useUserConfigStore } from './store/userConfigStore';
+import { configApi } from './api/configApi';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -26,6 +29,28 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  const { userLinks, replaceLinks } = useUserConfigStore();
+  const hasLoadedLinksRef = useRef(false);
+
+  useEffect(() => {
+    if (hasLoadedLinksRef.current) return;
+    hasLoadedLinksRef.current = true;
+
+    const loadLinks = async () => {
+      const links = await configApi.loadLinks();
+      if (!links) return;
+
+      if (links.length > 0) {
+        replaceLinks(links);
+        return;
+      }
+
+      await configApi.saveLinks(userLinks);
+    };
+
+    loadLinks();
+  }, [replaceLinks, userLinks]);
+
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
