@@ -5,6 +5,7 @@ import type {
   UserControlPanelConfig,
   UserDevicesConfig,
   TodoJsonStructure,
+  UserPanelOrder,
 } from '../types/userConfig';
 import type { LinkConfig } from '../types/links';
 import { generateUUID } from '../utils/uuid';
@@ -19,6 +20,9 @@ interface UserConfigState {
 
   // User links
   userLinks: LinkConfig[];
+
+  // Panel order overrides by page
+  userPanelOrder: Record<string, UserPanelOrder>;
 
   // Actions for devices
   addDevice: (
@@ -45,6 +49,10 @@ interface UserConfigState {
   removeLink: (id: string) => void;
   replaceLinks: (links: LinkConfig[]) => void;
 
+  // Actions for panel ordering
+  setPanelOrder: (pageKey: string, order: UserPanelOrder) => void;
+  resetPanelOrder: (pageKey: string) => void;
+
   // Import/Export
   exportConfig: () => Partial<TodoJsonStructure>;
   importConfig: (config: Partial<TodoJsonStructure>) => void;
@@ -67,6 +75,7 @@ export const useUserConfigStore = create<UserConfigState>()(
       },
       userControlPanels: {},
       userLinks: DEFAULT_LINKS,
+      userPanelOrder: {},
 
       addDevice: (type, device) =>
         set((state) => ({
@@ -186,12 +195,27 @@ export const useUserConfigStore = create<UserConfigState>()(
           userLinks: links,
         })),
 
+      setPanelOrder: (pageKey, order) =>
+        set((state) => ({
+          userPanelOrder: {
+            ...state.userPanelOrder,
+            [pageKey]: order,
+          },
+        })),
+
+      resetPanelOrder: (pageKey) =>
+        set((state) => {
+          const { [pageKey]: removed, ...rest } = state.userPanelOrder;
+          return { userPanelOrder: rest };
+        }),
+
       exportConfig: () => {
         const state = get();
         return {
           userDevices: state.userDevices,
           userControlPanels: state.userControlPanels,
           userLinks: state.userLinks,
+          userPanelOrder: state.userPanelOrder,
         };
       },
 
@@ -200,6 +224,7 @@ export const useUserConfigStore = create<UserConfigState>()(
           userDevices: config.userDevices || state.userDevices,
           userControlPanels: config.userControlPanels || state.userControlPanels,
           userLinks: config.userLinks || state.userLinks,
+          userPanelOrder: config.userPanelOrder || state.userPanelOrder,
         })),
 
       loadFromTodoJson: (todoData) =>
@@ -212,6 +237,7 @@ export const useUserConfigStore = create<UserConfigState>()(
           },
           userControlPanels: todoData.userControlPanels || {},
           userLinks: todoData.userLinks || DEFAULT_LINKS,
+          userPanelOrder: todoData.userPanelOrder || {},
         }),
 
       getTodoJsonStructure: (existingTodo) => {
@@ -221,17 +247,19 @@ export const useUserConfigStore = create<UserConfigState>()(
           userDevices: state.userDevices,
           userControlPanels: state.userControlPanels,
           userLinks: state.userLinks,
+          userPanelOrder: state.userPanelOrder,
         };
       },
     }),
     {
       name: 'user-config-storage',
-      version: 2,
+      version: 3,
       migrate: (persistedState) => {
         const state = persistedState as UserConfigState;
         return {
           ...state,
           userLinks: state.userLinks || DEFAULT_LINKS,
+          userPanelOrder: state.userPanelOrder || {},
         };
       },
     }

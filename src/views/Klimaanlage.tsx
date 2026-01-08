@@ -3,10 +3,13 @@ import { klimaanlageConfig } from '../config/pages.config';
 import { AirConditionerCard } from '../components/devices/AirConditionerCard';
 import { useUserConfigStore } from '../store/userConfigStore';
 import { mergeControlPanels } from '../config/controlPanelMerger';
+import { getEffectivePanelOrder, orderPanelsById } from '../config/panelOrder';
 
 export const Klimaanlage = () => {
-  const { userControlPanels } = useUserConfigStore();
+  const { userControlPanels, userPanelOrder } = useUserConfigStore();
   const mergedPanels = mergeControlPanels(klimaanlageConfig.controlPanels, userControlPanels);
+  const panelOrder = getEffectivePanelOrder('klimaanlage', userPanelOrder).panelIdOrder;
+  const orderedPanels = orderPanelsById(mergedPanels, panelOrder);
 
   return (
     <div className="space-y-6">
@@ -53,7 +56,7 @@ export const Klimaanlage = () => {
       </div>
 
       {/* Other control panels */}
-      {mergedPanels.map((panel, idx) => (
+      {orderedPanels.map((panel, idx) => (
         <ControlPanel key={idx} title={panel.name} states={panel.states} />
       ))}
     </div>
