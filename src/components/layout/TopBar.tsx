@@ -1,15 +1,46 @@
 import { useState } from 'react';
 import { SettingsModal } from '../ui/SettingsModal';
 import { Button } from '../ui/Button';
+import { useViewMode } from '../../contexts/ViewModeContext';
+import { useColorScheme } from '../../contexts/ColorSchemeContext';
 
 export const TopBar = () => {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const { viewMode, setViewMode } = useViewMode();
+  const { scheme } = useColorScheme();
 
   return (
-    <header className="h-16 px-6 flex items-center justify-between sticky top-0 z-50 backdrop-blur-xl bg-cyan-900/30 border-b border-cyan-400/20 shadow-lg shadow-cyan-500/10">
+    <header className="h-16 px-6 flex items-center justify-between sticky top-0 z-50 backdrop-blur-xl bg-cyan-900/30 border-b border-cyan-400/20 shadow-lg shadow-cyan-500/10 relative">
+      <div className="flex items-center gap-3">
+        <div className="inline-flex bg-neutral-surface2/70 border border-stroke-subtle rounded-full p-1">
+          <button
+            onClick={() => setViewMode('dashboard')}
+            className="px-3 py-1.5 text-xs font-semibold rounded-full transition-colors"
+            style={
+              viewMode === 'dashboard'
+                ? { backgroundColor: scheme.primary, color: 'white' }
+                : { color: '#9ca3af' }
+            }
+          >
+            Dashboard
+          </button>
+          <button
+            onClick={() => setViewMode('change')}
+            className="px-3 py-1.5 text-xs font-semibold rounded-full transition-colors"
+            style={
+              viewMode === 'change'
+                ? { backgroundColor: scheme.primary, color: 'white' }
+                : { color: '#9ca3af' }
+            }
+          >
+            Change
+          </button>
+        </div>
+      </div>
+
       {/* Brand */}
-      <div className="flex items-center gap-4">
-        <h1 className="text-h1 font-bold text-white">Smart Home</h1>
+      <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
+        <h1 className="text-h1 font-semibold text-white tracking-wide">Smart Home</h1>
       </div>
 
       {/* Actions */}
