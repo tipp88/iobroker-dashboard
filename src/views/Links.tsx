@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Icon from '@mdi/react';
 import { Card } from '../components/ui/Card';
 import { useUserConfigStore } from '../store/userConfigStore';
@@ -8,6 +9,35 @@ const formatUrl = (url: string) => url.replace(/^https?:\/\//i, '');
 const normalizeUrl = (value: string) => {
   if (/^https?:\/\//i.test(value)) return value;
   return `http://${value}`;
+};
+
+const getFaviconUrl = (value: string) => {
+  try {
+    const normalized = normalizeUrl(value);
+    const url = new URL(normalized);
+    return `${url.origin}/favicon.ico`;
+  } catch {
+    return '';
+  }
+};
+
+const LinkIcon = ({ url, fallbackIconPath }: { url: string; fallbackIconPath: string }) => {
+  const [failed, setFailed] = useState(false);
+  const faviconUrl = getFaviconUrl(url);
+
+  if (!faviconUrl || failed) {
+    return <Icon path={fallbackIconPath} size={1.1} />;
+  }
+
+  return (
+    <img
+      src={faviconUrl}
+      alt=""
+      className="w-6 h-6 object-contain"
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
 };
 
 export const Links = () => {
@@ -46,8 +76,8 @@ export const Links = () => {
               >
                 <Card className="h-full transition-transform duration-200 hover:-translate-y-1 hover:border-cyan-400/50">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-neutral-surface2 flex items-center justify-center text-cyan-200 group-hover:text-cyan-100 transition-colors">
-                      <Icon path={icon.path} size={1.1} />
+                  <div className="w-12 h-12 rounded-2xl bg-neutral-surface2 flex items-center justify-center text-cyan-200 group-hover:text-cyan-100 transition-colors">
+                      <LinkIcon url={link.url} fallbackIconPath={icon.path} />
                     </div>
                     <div className="min-w-0">
                       <h3 className="text-body font-semibold text-text-primary truncate">

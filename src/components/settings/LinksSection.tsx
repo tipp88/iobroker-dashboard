@@ -12,6 +12,41 @@ const normalizeUrl = (value: string) => {
   return `http://${trimmed}`;
 };
 
+const getFaviconUrl = (value: string) => {
+  try {
+    const normalized = normalizeUrl(value);
+    const url = new URL(normalized);
+    return `${url.origin}/favicon.ico`;
+  } catch {
+    return '';
+  }
+};
+
+const LinkPreviewIcon = ({
+  url,
+  fallbackIconPath,
+}: {
+  url: string;
+  fallbackIconPath: string;
+}) => {
+  const [failed, setFailed] = useState(false);
+  const faviconUrl = getFaviconUrl(url);
+
+  if (!faviconUrl || failed) {
+    return <Icon path={fallbackIconPath} size={0.9} />;
+  }
+
+  return (
+    <img
+      src={faviconUrl}
+      alt=""
+      className="w-5 h-5 object-contain"
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
+};
+
 export const LinksSection = () => {
   const { userLinks, addLink, updateLink, removeLink } = useUserConfigStore();
   const [newName, setNewName] = useState('');
@@ -91,7 +126,7 @@ export const LinksSection = () => {
               className="grid gap-3 items-center md:grid-cols-[auto_1.2fr_2fr_1fr_auto] bg-neutral-surface2 border border-stroke-default rounded-lg p-3"
             >
               <div className="w-10 h-10 rounded-full bg-neutral-surface3 flex items-center justify-center">
-                <Icon path={LINK_ICON_MAP[link.iconKey].path} size={0.9} />
+                <LinkPreviewIcon url={link.url} fallbackIconPath={LINK_ICON_MAP[link.iconKey].path} />
               </div>
               <input
                 value={link.name}
