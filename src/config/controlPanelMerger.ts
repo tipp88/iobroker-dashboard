@@ -16,6 +16,7 @@ export const mergeControlPanels = (
     // If user has modified this panel, use their version
     if (userPanel) {
       return {
+        id: panelId,
         name: userPanel.name,
         states: userPanel.states as any,
       };

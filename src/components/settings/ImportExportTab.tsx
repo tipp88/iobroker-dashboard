@@ -7,7 +7,7 @@ import { cn } from '../../utils/cn';
 type ImportMode = 'merge' | 'replace';
 
 export const ImportExportTab = () => {
-  const { exportConfig, importConfig, userDevices, userControlPanels, userLinks } = useUserConfigStore();
+  const { exportConfig, importConfig, userDevices, userControlPanels, userLinks, userPanelOrder } = useUserConfigStore();
   const { importFromFile, importFromText, isImporting, importError, clearError } = useDeviceImport();
 
   const [exportPreview, setExportPreview] = useState('');
@@ -99,6 +99,7 @@ export const ImportExportTab = () => {
         userDevices: mergedDevices,
         userControlPanels: mergedPanels,
         userLinks: mergedLinks,
+        userPanelOrder: config.userPanelOrder || userPanelOrder,
       });
     }
 

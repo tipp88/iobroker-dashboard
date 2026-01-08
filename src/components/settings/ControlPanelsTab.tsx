@@ -4,6 +4,7 @@ import { ControlPanelFormModal } from './ControlPanelFormModal';
 import { EXISTING_CONTROL_PANELS, getPanelUsage } from '../../config/existingPanels.config';
 import type { UserControlPanelConfig } from '../../types/userConfig';
 import { cn } from '../../utils/cn';
+import { PanelOrderSection } from './PanelOrderSection';
 
 export const ControlPanelsTab = () => {
   const { userControlPanels, addControlPanel, updateControlPanel, removeControlPanel, duplicateControlPanel } =
@@ -103,6 +104,10 @@ export const ControlPanelsTab = () => {
           panels. Each state can have switches, time pickers, dropdowns, etc.
         </p>
       </div>
+
+      <PanelOrderSection />
+
+      <div className="border-t border-stroke-subtle"></div>
 
       {/* Search and Add */}
       <div className="flex gap-3">

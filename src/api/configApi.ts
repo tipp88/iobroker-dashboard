@@ -132,6 +132,13 @@ class ConfigApi {
       }
     }
 
+    // Validate userPanelOrder structure
+    if (config.userPanelOrder) {
+      if (typeof config.userPanelOrder !== 'object') {
+        errors.push('Invalid userPanelOrder structure - expected object');
+      }
+    }
+
     return {
       isValid: errors.length === 0,
       errors,

@@ -39,6 +39,11 @@ export interface UserControlPanelConfig {
   states: Record<string, StateConfig>;
 }
 
+export interface UserPanelOrder {
+  sectionOrder: string[];
+  panelOrder: Record<string, string[]>;
+}
+
 export interface TodoJsonStructure {
   plan?: {
     type: string;
@@ -49,6 +54,7 @@ export interface TodoJsonStructure {
   userDevices?: UserDevicesConfig;
   userControlPanels?: Record<string, UserControlPanelConfig>;
   userLinks?: LinkConfig[];
+  userPanelOrder?: Record<string, UserPanelOrder>;
 }
 
 export interface DeviceValidationResult {
