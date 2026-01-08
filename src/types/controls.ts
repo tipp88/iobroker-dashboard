@@ -29,6 +29,7 @@ export interface StateConfig {
 }
 
 export interface ControlPanelConfig {
+  id?: string;
   name: string;
   states: Record<string, StateConfig>;
 }

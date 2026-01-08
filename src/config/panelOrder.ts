@@ -60,13 +60,10 @@ export const getEffectivePanelOrder = (
   };
 };
 
-export const orderPanelsById = <T extends { id?: string }>(
-  panels: T[],
-  panelIdOrder: string[]
-) => {
+export const orderPanelsById = <T>(panels: T[], panelIdOrder: string[]) => {
   if (!panelIdOrder.length) return panels;
 
-  const panelMap = new Map(panels.map((panel) => [panel.id, panel]));
+  const panelMap = new Map(panels.map((panel) => [(panel as { id?: string }).id, panel]));
   const ordered: T[] = [];
 
   panelIdOrder.forEach((id) => {
